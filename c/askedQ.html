@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="#include&lt;stdio.h> #include&lt;conio.h> void main() { int a,b,c;">
+    <meta name="title" content="How to add two numbers in C ?">
+    <meta name="keywords" content="add two numbers in c,addition in c,programhelper, basics of c">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <style>
+      body{
+        background-color: white;
+      }
+      .containQ{
+        box-shadow: 4px 8px 12px 2px;
+    width: 90vw;
+    padding: 25px;
+    border-radius: 19px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+      }
+      .Qasked{
+        font-weight: 700;
+      }
+      .solutionTag23{
+        text-decoration: underline;
+      }
+      .solutionQ45{
+        color: blue;
+        font-weight: 500;
+      }
+      .btnLink{
+        font-size: x-large;
+        width: 20vw;
+        height: 82px;
+        margin: 5vw;
+        box-shadow: 2px 4px 8px 1px;
+        border-style: none;
+        color: blueviolet;
+        }
+        .btnLink:hover{
+        width: 20vw;
+        height: 82px;
+        margin: 5vw;
+        box-shadow: 1px 1px 1px 1px;
+        }
+        #containBtnLink{
+          width: fit-content;
+          margin: auto;
+          margin-bottom: 10px;
+        }
+    </style>
+    <title>ProgramHelper - Asked Questions</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:powderblue ">
+      <a class="navbar-brand" href="#">ProgramHelper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="askedQ.html">Asked Questions</a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Div  -->
+    <div class="containQ">
+      <p class="Qasked">Q. Write the output of the following statements</p>
+      <p>&nbsp&nbsp&nbsp&nbsp&nbspint a = 12,b = 20;</p>
+      <p>&nbsp&nbsp&nbsp&nbsp&nbspSystem.out.println("a++ = " +a++);</p>
+      <p>&nbsp&nbsp&nbsp&nbsp&nbspSystem.out.println("--a = " +--a);</p>
+     
+      <p><span class="solutionTag23">Solution </span><span class="solutionQ45">:- &nbsp&nbspa++ = 12</span></p>
+      <p class="solutionQ45">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp--a = 12</p>
+      <p class="solutionQ45">After a++ the value of a will be incremented by 1 which makes it 13,but output will be 12 as it is post-increment and now the value of a is 13,then with --a first value is decreased by 1 which makes it 12 and output will be 12 again.</p>
+      
+    </div>
+
+
+    <div class="containQ">
+      <p class="Qasked">Q. Find the error(s) in the following code.</p>
+      <p>&nbsp&nbsp&nbsp&nbsp&nbspbyte a = 10;</p>
+      <p>&nbsp&nbsp&nbsp&nbsp&nbspint b = 20;</p>
+      <p>&nbsp&nbsp&nbsp&nbsp&nbspint c = a>b?a,b;</p>
+      <p>&nbsp&nbsp&nbsp&nbsp&nbspSystem.out.println(c);</p>
+     
+      <p><span class="solutionTag23">Solution </span><span class="solutionQ45">:- First line - byte</span></p>
+      <p class="solutionQ45">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThird line - a,b will show error,instead a:b is used. </p>
+     
+      
+    </div>
+
+
+
+  <div id="containBtnLink"> 
+
+<a href="cindex.html"><button class="btnLink">C</button></a>
+<a href="/cplus"><button class="btnLink">C++</button></a>
+</div> 
+
+
+
+
+
+   
+ 
+  
+
+  <!-- Last section -->
+
+  <div id="animate">
+    <h6 style="text-align: center;">Designed by Program helper</h6>
+  </div>
+<!-- 
+<script>
+        function getQuestions(){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function()
+      {
+        if (this.readyState == 4 && this.status == 200) {
+          let resp = JSON.parse(this.responseText).results;
+          let x;
+          console.log(resp);
+          for (x = 0; x < resp.length; x++) {
+            document.body.innerHTML = document.body.innerHTML + '<div id="container"><h4 id="aboutCHead">' + resp[x].question + '</h4> <p class="basicAnswer">' + resp[x].solution +'</p></div>';
+            }
+      
+
+
+}
+};
+  xhttp.open("GET", "/fetchQuestions", true);
+  xhttp.send();
+}
+  getQuestions()
+</script> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

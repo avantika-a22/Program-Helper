@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+     form {
+       width:280px;
+       position:absolute;
+       top: 50%;
+       left:50%;
+       transform: translate(-50%,-50%);
+      color:whitesmoke;
+       }
+       
+        
+        body{
+          width: 100%;
+          height: 100vh;
+          font-family: sans-serif;
+          
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        h1{
+   
+          font-size: 40px;
+          border-bottom:6px solid #4caf50;
+          margin-bottom: 6px;
+          padding: 5px 0;
+
+        
+        }
+        .contactformgroup{
+          width:100;
+          overflow: hidden;
+          font-size: 20px;
+          padding:8px 0;
+          margin:4px 0;
+        }
+        
+        .contactformcontrol{
+          font-size: 20px;
+          width:250px;
+          background: transparent;
+          border-style: none;
+          border-bottom: 1px solid orange;
+          outline: none;
+         height: 30px;
+          color: white;
+        }
+      .contactformcontrol:focus{
+        border-bottom: 2px solid white;
+      }
+        
+        #sendForm{
+          background-color: thistle;
+          width: 260px;
+          height: 50px;
+          font-size: larger;
+        }
+        #sendForm:hover{
+          background-color: tomato;
+        }
+
+        
+    </style>
+</head>
+<body onload="imageReady()">
+   <form>
+     <h1>Contact</h1>
+        <div class="contactformgroup">
+        
+     <p> <input type="email" name="email" class="contactformcontrol" id="Input" aria-describedby="emailHelp" placeholder="Enter email"></p>
+        
+        </div>
+        <div class="form-group">
+      <p> <input type="Message" name="message" class="contactformcontrol" id="example" placeholder="Message"></p>
+        </div>
+        
+        </div>
+        <button type="button" id="sendForm">Send</button>
+
+
+      </form>
+   
+      <script>
+        function imageReady()
+        {
+          document.body.style.backgroundImage = "url(https://p7.hiclipart.com/preview/158/254/346/light-desktop-wallpaper-blue-black-cyan-black-background.jpg)";
+        }
+        var btn = document.getElementById('sendForm');
+        btn.onclick = function() {
+          var email = document.getElementById('Input').value;
+          var msg = document.getElementById('example').value;
+          if(email == "" || msg == ""){
+            alert("Fill in fields first!");
+          }else{
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "/contactus", true);
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            xhr.send(JSON.stringify({"semail":email, "smsg": msg}));
+
+            xhr.onreadystatechange = function()
+            {
+              if(this.readyState == 4 && this.status == 200){
+                let resp = JSON.parse(this.responseText).message;
+                if (resp == "Success"){
+                  alert("Email sent successfully");
+                  document.getElementById('Input').value = "";
+                  document.getElementById('example').value ="";
+                }
+                else{
+                  alert("Email not sent");
+                }
+              }
+            }
+          }
+        };
+      </script>
+</body>
+</html>

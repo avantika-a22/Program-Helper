@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A palindromic number (also known as a numeral palindrome or a numeric palindrome) is a number (such as 16461) that remains the same when its digits are reversed.....">
+        <meta name="title" content="C Program to check a number is palindrome or not">
+        <meta name="keywords" content="What are palindrome numbers, check palindrome number, programhelper,c programming">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <title>ProgramHelper - C Program to print check a number is Palindrome or not</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:powderblue ">
+        <a class="navbar-brand">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askedQ.html">Asked Questions</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Div  -->
+    <div id="container">
+        <h4 id="aboutCHead">C Program to print check a number is Palindrome or not.</h4>
+        <p class="basicAnswer">A palindromic number (also known as a numeral palindrome or a numeric palindrome) is a number (such as 16461) that remains the same when its digits are reversed.</p>
+
+        <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+        <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+
+
+        <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+        <p class="mainCode">{</p>
+
+        <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> n,sum = 0,temp;</p>
+        <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter the no:- </span>");</p>
+        <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&n);</p>
+        <p class="mainCode">&nbsp&nbsptemp = n;</p>
+        <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">while</span>(n > 0)</p>
+        <p class="mainCode">&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspr = n % 10;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspsum = (sum*10)+r;</p>         
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspn = n/10;</p>
+            <p class="mainCode">&nbsp&nbsp}</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">if</span>(temp == sum)</p>
+        <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">palindrome number</span>");</p>
+        <p class="mainCode" style="font-weight: 500;">&nbsp&nbspelse</p>
+        <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">not palindrome</span>");</p>
+
+
+        <p class="mainCode" style="font-weight: 500;">&nbsp&nbspgetch();</p>
+        <p class="mainCode">}</p>
+ 
+        <h4 class="mainCode">Output:-</h4>
+        <p class="basicAnswer">Enter the no:- 101</p>
+        <p class="basicAnswer">palindrome number</p>
+         
+    </div>
+
+
+
+
+
+
+
+    <!-- Button links basics -->
+
+    <div id="basicsBtnLink">
+        <button class="basicBtn"><a class="basicBtnLinks" href="csorting.html">Sorting</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="coperators.html">Operators</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="ccontrolstatements.html">Loops</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="carrays.html">Arrays</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cfunctions.html">Functions</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cpointers.html">Pointers</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cstrings.html">Strings</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="basicsofC.html">Basics of C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cvariables.html">Variables in C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="aboutcdatastructures.html">Data Structure</a></button>
+
+    </div>
+    <!-- Footer -->
+    <div id="contain">
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="chelloWorld.html">C Program to print 'Hello World'</a> </li>
+                <li><a class="inLinks" href="caddition.html">C program to add two numbers</a></li>
+                <li><a class="inLinks" href="cdivision.html"> C Program to find quotient,remainder</a></li>
+                <li><a class="inLinks" href="csizeof.html">C Program to find Size of Datatypes</a></li>
+                <li><a class="inLinks" href="clargestamongthreeno.html"> C Program to Check the Largest among Three
+                        Numbers</a></li>
+                <li><a class="inLinks" href="cswapping.html">C Program to Swap Two Numbers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="cevenodd.html"> C Program to Check whether a Number is Even or Odd</a></li>
+                <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using
+                        Iteration</a></li>
+                <li><a class="inLinks" href="cfactorialrecursion.html">C Program to Find Factorial of a Number using
+                        Recursion</a></li>
+                <li><a class="inLinks" href="cmultiplytable.html">C Program to Print Multiplication Table</a></li>
+                <li><a class="inLinks" href="creverse.html">C Program to Reverse a Number</a></li>
+                <li><a class="inLinks" style="color: teal;">C Program to Check whether a Number is Palindrome or
+                        not</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="cchecknopositivenegative.html">C Program to Check whether a Number is
+                        Positive , Negative or Zero</a></li>
+                <li><a class="inLinks" href="carmstrong.html">C program to Check Armstrong Number</a></li>
+
+                <li><a class="inLinks" href="csumofarrayele.html">c Program to Find Sum of All the Elements in an
+                        array</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="creversestring.html">C Program to Reverse a String</a></li>
+                <li><a class="inLinks" href="clargestinarray.html">C Program to Find Largest Element in an Array</a>
+                </li>
+                <li><a class="inLinks" href="ctranspose.html">C Program to Find Transpose of a Matrix</a></li>
+                <li><a class="inLinks" href="cpatterns.html">C Program to Print Star Pattern and other patterns</a></li>
+                <li><a class="inLinks" href="ccallbyvaluereference.html">C Program of Call by Value and Call by
+                        Reference</a></li>
+                <li><a class="inLinks" href="cpointers.html">C Program to understand Pointers</a></li>
+
+            </ul>
+        </div>
+
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="clengtstring.html">C Program to Find the Length of a String</a></li>
+                <li><a class="inLinks" href="cnoofspacesstring.html">C Program to Find no. of Spaces in a String</a>
+                </li>
+                <li><a class="inLinks" href="cnoofwords.html">C Program to Calculate Number of Words in a String </a>
+                </li>
+                <li><a class="inLinks" href="cfilefunctions.html">C Program to understand File functions
+                        (fwrite,fread,fputs,fgets)</a></li>
+                <li><a class="inLinks" href="cstructuresunions.html">C Program to understand Structures and Unions</a>
+                </li>
+                <li><a class="inLinks" href="ctowerofhanoi.html">C Program to explain Tower of Hanoi.</a></li>
+                <li><a class="inLinks" href="cstack.html">C Program for stack.</a></li>
+                <li><a class="inLinks" href="cqueue.html">C Program for Queue.</a></li>
+                <li><a class="inLinks" href="clinkedlist.html">C Program for Linked List.</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!--  -->
+
+    <div id="gap">
+        <h5 id="allGap">All</h5>
+    </div>
+
+
+    <!-- Summary Links -->
+
+    <div id="sContainer">
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink">C</a> </li>
+                <li class="summaryLinks"><a class="summaryLink" href="/cplus ">C++</a></li>
+                <li class="summaryLinks"><a class="summaryLink" >HTML (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a>
+                </li>
+                <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using
+                        database</a></li>
+                
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- Last section -->
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

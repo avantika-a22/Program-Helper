@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url(images/pexels-anni-roenkae-2832382.jpg);
+            background-size: cover;
+        }
+        .formContain22{
+            height: 450px;
+    border-style: double;
+    width: 60vw;
+    margin: auto;
+    margin-top: 40px;
+        }
+
+#form34{
+    height: 350px;
+    margin: auto;
+    width: 40vw;
+    border-style: groove;
+    margin-top: 50px;
+    background-color: black;
+    box-shadow: 10px 10px 8px 10px;
+}
+.inputField{
+    margin-bottom: 30px;
+    margin-top: 45px;
+    width: 34vw;
+    margin-left: 2.5vw;
+    background-color: transparent;
+    color: white;
+    font-size: x-large;
+    padding-left: 5px;
+}
+#btnContain{
+    text-align: -webkit-center;
+    margin-top: 20px;
+}
+#btn{
+    width: 90px;
+}
+@media screen and (max-width: 800px){
+    .formContain22{
+     height: 450px;
+    border-style: none;
+    width: 90vw;
+    margin: auto;
+    margin-top: 40px;
+        }
+        #form34{
+            height: 350px;
+    margin: auto;
+    width: 80vw;
+    margin-top: 90px;
+        }
+        .inputField{
+    margin-bottom: 30px;
+    margin-top: 45px;
+    width: 72vw;
+    margin-left: 2.5vw;
+    background-color: transparent;
+    color: white;
+    font-size: x-large;
+    padding-left: 5px;
+}
+}
+    </style>
+    <title>Programhelper - Admin Login</title>
+  </head>
+  <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" style="opacity: 0.5;background-color: black;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="color: white;font-weight: 700;">Admin Login</a>
+              <button class="navbar-toggler" style="background-color:blue;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: white;"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html" style="font-weight: 300;color: white;">Back to Home</a>
+                  </li>
+                
+    
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+   
+
+    <!-- Form -->
+
+          <div class="formContain22">
+              <div id="form34">
+                <form action="/adminLogin" method="POST">
+                    <input type="text" class="inputField" id="username" name="username" placeholder="Username" required>
+              </br>
+                  <input type="password" class="inputField" id="password" name="password" placeholder="Password" required>
+            </br>
+            <div id="btnContain">
+                <button type="submit" onclick="check()" id="btn">Login</button>
+            </div>
+                  
+              </form>
+              </div>
+          </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  
+  </body>
+</html>

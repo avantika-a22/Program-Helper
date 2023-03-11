@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Programs on Constructors and Destructors in C">
+    <meta name="description" content="Default Constructor, Parameterized Constructor, Copy Constructor,Multiple Constructor, Destructors...">
+    <meta name="keywords" content="Default Constructor, Parameterized Constructor,Destructor in C++,Programhelper">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>ProgramHelper - C++ Constructor and Destructor</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="font-size:x-large;font-family: cursive;">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/homefromcplus">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/askQfromcplus">Asked Questions</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactfromcplus" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    <!-- Buttons -->
+
+
+
+    <!-- Div  -->
+    
+
+    
+    <div class="pluscontainer">
+        <div class="plusbasic">
+            <h4 id="plusaboutHead">1. C++ Program on Default Constructor.</h4>
+            <p></p>
+            <p class="mainCode" style="color: green;">#include&lt;iostream></p>
+            <p class="mainCode" style="font-weight: 500;font-style: italic;">using namespace std;</p>
+            <p class="mainCode"><span style="font-weight: 500;">class</span> xyz</p>
+
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode" style="font-weight: 500;">public:</p>
+            
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> age;</p>
+            
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> wei;</p>
+            
+            <p class="mainCode">xyz()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">&nbsp&nbspage = 30;</p>
+            
+            <p class="mainCode">&nbsp&nbspwei = 60;</p>
+            
+            <p class="mainCode">}</p>
+            
+            <p class="mainCode">};</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">int</span> main()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">xyz c;</p>
+            
+            <p class="mainCode">cout&lt;&lt;"<span style="color: mediumblue;">Age</span> : "&lt;&lt;c.age&lt;&lt;endl;</p>
+            
+            <p class="mainCode">cout&lt;&lt;"<span style="color: mediumblue;">Weight</span> : "&lt;&lt;c.wei&lt;&lt;endl;</p>
+            
+            <p class="mainCode" span style="font-weight: 500;">return 0;</p>
+            
+            <p class="mainCode">}</p>
+           <h4 id="outputTag">Output</h4>
+           <p class="betDec">Age : 30</p>
+           <p class="betDec">Wei : 60</p>
+
+           <h4 id="plusaboutHead">Parameterized Constructor</h4>
+           <h4> - C++ Program on passing one argument to the constructor.</h4>
+           <p></p>
+           <p class="mainCode" style="color: green;">#include&lt;iostream></p>
+           <p class="mainCode" style="font-weight: 500;font-style: italic;">using namespace std;</p>
+           <p class="mainCode"><span style="font-weight: 500;">class</span> circle</p>
+
+           <p class="mainCode">{</p>
+            <p class="mainCode" style="font-weight: 500;">private:</p>
+            <p class="mainCode"><span style="font-weight: 500;">float</span> r;</p>
+   
+           <p class="mainCode" style="font-weight: 500;">public:</p>
+           
+           <p class="mainCode">circle(<span style="font-weight: 500;">float</span> n)</p>
+           
+           <p class="mainCode">{</p>
+           
+           <p class="mainCode">&nbsp&nbspr = n;</p>
+           
+           <p class="mainCode">}</p>
+           <p class="mainCode">display()</p>
+           <p class="mainCode">{</p>
+           
+           <p class="mainCode">&nbsp&nbsparea = 3.14 * r * r;</p>
+           
+           <p class="mainCode">&nbsp&nbspcir = 2 * 3.14 * r;</p>
+           <p class="mainCode">&nbsp&nbspcout&lt;&lt;"<span style="color: mediumblue;">Area = </span>"&lt;&lt;area&lt;&lt;endl;</p>
+           <p class="mainCode">&nbsp&nbspcout&lt;&lt;"<span style="color: mediumblue;">Circumference = </span>"&lt;&lt;cir&lt;&lt;endl;</p>
+           
+           <p class="mainCode">}</p>
+           
+           <p class="mainCode">};</p>
+           
+           <p class="mainCode"><span style="font-weight: 500;">int</span> main()</p>
+           
+           <p class="mainCode">{</p>
+           
+           <p class="mainCode">circle obj(10);</p>
+           
+           <p class="mainCode">obj.display();</p>
+           
+           
+           
+           <p class="mainCode"  style="font-weight: 500;">return 0;</p>
+           
+           <p class="mainCode">}</p>
+          <h4 id="outputTag">Output</h4>
+          <p class="betDec">Area : 314</p>
+          <p class="betDec">Circumference : 62.8</p>
+          
+
+
+          <h4 id="plusaboutHead">Copy Constructor</h4>
+           <p class="mainCode" style="color: green;">#include&lt;iostream>
+
+            <p class="mainCode"  style="font-weight: 500;font-style: italic;">using namespace std;
+            
+            <p class="mainCode"><span style="font-weight: 500;">Class</span> Copy</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode" style="font-weight: 500;">private:</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">int</span> a , b;</p>
+            
+            <p class="mainCode" style="font-weight: 500;">public:</p>
+            
+            <p class="mainCode">Copy(<span style="font-weight: 500;">int</span> m, <span style="font-weight: 500;">int</span> n)</p>
+        
+            <p class="mainCode">{ a = m; b = n; }</p>
+            
+            <p class="mainCode" style="font-style: italic;color: blue;">// Copy constructor</p>
+            
+            <p class="mainCode">Copy(const Copy &p2)</p>
+            
+            <p class="mainCode">{a = p2.a; b = p2.b; }</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">int</span> getA() { return a; }</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">int</span> getB() { return b; }</p>
+            
+            <p class="mainCode">};</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">int</span> main()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">Copy p1(5, 15);<span style="color: blue;font-style: italic;"> // Normal constructor</span> </p>
+            
+            <p class="mainCode">Copy p2 = p1;<span style="color: blue;"> // Copy constructor</span> </p>
+            
+            <p class="mainCode">cout&lt;&lt; "<span style="color: mediumblue;">p1.a = </span>" &lt;&lt; p1.getA() &lt;&lt; "<span style="color: mediumblue;">, p1.b = </span>"&lt;&lt; p1.getB();</p>
+            
+            <p class="mainCode">cout &lt;&lt; "<span style="color: mediumblue;">\np2.a = </span>" &lt;&lt; p2.getA()&lt;&lt; "<span style="color: mediumblue;">, p2.b = </span>" &lt;&lt;p2.getB();</p>
+        
+            <p class="mainCode">return 0;</p>
+            
+            <p class="mainCode">}</p>
+                <h4 id="outputTag">Output</h4>
+          <p class="betDec">p1.a = 5, p1.b = 15</p>
+          <p class="betDec">p2.a = 5, p2.b = 15</p>
+        
+           <h4 id="plusaboutHead">Multiple Constructors</h4>
+           <p></p>
+           <p class="mainCode" style="color: green;">#include &lt;iostream></p>
+
+            <p class="mainCode" style="font-weight: 500;font-style: italic;">using namespace std;</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">class</span> multiple</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode"style="font-weight: 500;">public:</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">float</span> sum;</p>
+            
+            <p class="mainCode" style="color: blue;font-style: italic;">//constructor with two parameters</p>
+            
+            <p class="mainCode">multiple(<span style="font-weight: 500;">int</span> a , <span style="font-weight: 500;">int</span> b)</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">sum = a + b;</p>
+            
+            <p class="mainCode">}</p>
+            
+            <p class="mainCode" style="color: blue;font-style: italic;">//constructor with no parameters</p>
+            
+            <p class="mainCode">multiple()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">sum = 0;</p>
+            
+            <p class="mainCode">}</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">void</span> disp()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">cout&lt;&lt; sum&lt;&lt; endl;</p>
+            
+            <p class="mainCode">}</p>
+            
+            <p class="mainCode">};</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">int</span> main()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">multiple o(20 , 40);</p>
+            
+            <p class="mainCode">multiple o2;</p>
+            
+            <p class="mainCode">o.disp();</p>
+            
+            <p class="mainCode">o2.disp();</p>
+            
+            <p class="mainCode" style="font-weight: 500;">return 1;</p>
+            
+            <p class="mainCode">}</p>
+            <h4 id="outputTag">Output</h4>
+          <p class="betDec">60</p>
+          <p class="betDec">0</p>
+
+
+          <p>
+
+          </p>
+          <h4 id="plusaboutHead">Destructors</h4>
+          <p class="betDec">Destructor is a member function which destructs or deletes an object.</p>
+          <p class="noteLine">There can only be one destructor in a class.</p>
+          <p class="mainCode" style="color: green;">#include&lt;iostream></p>
+
+            <p class="mainCode" style="font-weight: 500;font-style: italic;">using namespace std;</p>
+            
+            <p class="mainCode">class destructor</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">public:</p>
+            
+            <p class="mainCode" style="color: blue;font-style: italic;">//constructor</p>
+            
+            <p class="mainCode">destructor()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"It is constructor"</span>&lt;&lt;endl;</p>
+            
+            <p class="mainCode">}</p>
+            
+            <p class="mainCode" style="color: blue;font-style: italic;">//destructor</p>
+            
+            <p class="mainCode" >~destructor()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"It is destructor"</span>&lt;&lt;endl;</p>
+            
+            <p class="mainCode">}</p>
+            
+            <p class="mainCode">void disp()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"Hello Destructor"</span>&lt;&lt;endl;</p>
+            
+            <p class="mainCode">}</p>
+            
+            <p class="mainCode">};</p>
+            
+            <p class="mainCode"><span style="font-weight: 500;">int</span> main()</p>
+            
+            <p class="mainCode">{</p>
+            
+            <p class="mainCode">destructor obj;</p>
+            
+            <p class="mainCode">obj.disp();</p>
+            
+            <p class="mainCode" style="font-weight: 500;">return 0;</p>
+            
+            <p class="mainCode">}</p>
+            <h4 id="outputTag">Output</h4>
+            <p class="betDec">It is constructor</p>
+                
+                
+            <p class="betDec">Hello Destructor</p>
+            <p class="betDec">It is destructor</p>
+            </div>
+
+
+    </div>
+
+
+
+
+
+    
+
+
+
+    <div id="plusqualities">
+        <div class="plusProgramLinks">
+            <h4 id="aboutCHead">Other Programs</h4>
+            <a  class="plusprogramaLinks" href="/plusaddition">1. C++ Program to add two numbers.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a  class="plusprogramaLinks" href="/plusvolumeofcube">2. C++ Program to calculate the volume of a cube.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a  class="plusprogramaLinks" href="/pluscircle">3. C++ Program which accepts the radius of a circle from the user and compute the area and circumference</a>
+        </div>
+
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusfindangle">4. C++ Program to find the missing third angle of a triangle.</a>
+         </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plussortingnames">5. C++ Program to Sort Names in an Alphabetical Order</a>
+        </div>
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" style="color: black;">6. C++ Program for Constructor and Destructor.</a>
+         </div>
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusreversearray">7. C++ Program to Reverse an Array.</a>
+         </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusbankingsystem">8. c++ Program for Banking(ATM) System.</a>
+        </div>
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusthisPointer">9. Concept of This Pointer.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/pluspolymorphism">10. Polymorphism in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusinheritance">11. Ineritance in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusencapsulation">12.  Encapsulation in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusLoops">13. Loops in C++(for loop, while loop, do while loop).</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="plusManipulatestring">14. Sorting.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusstatements">15. Continue, break, goto statements in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plussearchelearray">16. C++ Program to search an element and its Position in a given array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="plusmergetwoarraysort">17. C++ program to merge two arrays and then sort the resulted array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusswapwithoutvariable">18. C++ Program for How to swap two numbers without using a temporary variable?</a>
+        </div>  
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusseriessum">19. C++ Program to find sum of series 1 + 1/2 + 1/3 + 1/4 + .. + 1/n.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusleapyear">20. C++ Program to check if a given year is leap year.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusprintwithoutloop">21. C++ program to print numbers from 1 to 100 without using loop?</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusFiles">22. Files in C++.</a>
+        </div>
+       
+
+    </div>
+
+    
+      <!-- Summary Links -->
+    
+      <div id="plusLastContain">
+    
+        <div class="summary">
+          <ul>
+            <li class="summaryLinks"><a class="summaryLink" href="/cfromcplus">C</a> </li>
+            <li class="summaryLinks"><a class="summaryLink">C++</a></li>
+            <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+    
+            <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a></li>
+            <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using database</a></li>
+            
+    
+          </ul>
+        </div>
+    
+      </div>
+    
+
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

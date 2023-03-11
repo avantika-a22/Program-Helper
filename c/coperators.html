@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="An operator specifies an operation to be performed that yields a value. The
+    variables, constants can
+    be joined by various operators to form an expression.Operators can be of different types....">
+        <meta name="title" content="Operators in C">
+        <meta name="keywords" content="Operators in C, Operators, programhelper,c programming,assignment operator in c,arithmetic operator in c,increment and decrement operator in c,Relational operator in C,Logical Operator in C,Bitwise Operator in C,sizeof operator in C">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Operators in C</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="font-size:x-large;font-family: cursive;">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askedQ.html">Asked Questions</a>
+                </li>
+     
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Div  -->
+    <div id="basicsDiv">
+        <div class="basic123">
+            <h4>Q.What are Operators in C?</h4>
+            <p class="basicAnswer">- An operator specifies an operation to be performed that yields a value. The
+                variables, constants can
+                be joined by various operators to form an expression.</p>
+            <p class="basicAnswer">An operand is a data item on which an operator
+                acts. Some operators require two operands, while others act upon only one operand. C includes a large
+                number of operators that fall under several different categories, which are as:-</p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith()">1. Arithmetic operators</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith2()">2. Assignment operators</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith3()">3. Increment and Decrement
+                    operators</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith4()">4. Relational operators</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith5()">5. Logical operators</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith6()">6. Conditional operators</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith7()">7. Comma operators</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith8()">8. sizeof operator</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith9()">9. Bitwise operator</a></p>
+            <p class="basicAnswer"><a class="scrollLinks" onclick="scrollarith10()">10. Other operators</a></p>
+
+
+            <h4 id="arithmeticoperator">1. Arithmetic Operators</h4>
+            <p class="basicAnswer">- Arithmetic operators are used for numeric calculations. They are of two types</p>
+            <p class="basicAnswer">a. Unary arithmetic operators</p>
+            <p class="basicAnswer">b. Binary arithmetic operators</p>
+            <h5>Unary arithmetic operators</h5>
+            <p class="betDec">Unary operators require only one operand. For Example-</p>
+            <p class="betDec">+x&nbsp&nbsp&nbsp-y</p>
+            <p class="betDec">Here '-' changes the sign of the operand y.</p>
+            <h5>Binary arithmetic operators</h5>
+            <p class="betDec">Binary operators require two operands.There are five binary arithmetic operators:-</p>
+            <p class="betDec">+ (performs addition)</p>
+            <p class="betDec">- (performs subtraction)</p>
+            <p class="betDec">/ (to calculate Quotient in division)</p>
+            <p class="betDec">% (to calculate Remainder in division)</p>
+            <p class="betDec">* (to perform multiplication)</p>
+
+            <h4 id="assignmentoperator">2. Assignment Operators</h4>
+            <p class="basicAnswer">- A value can be stored in a variable with the use of assignment operator. This
+                assignment operator "=", is used in assignment expressions and assignment statements.</p>
+            <p class="basicAnswer">The operand on the left hand side should be a variable, while the operand on the
+                right hand side can
+                any variable, constant or expression. The value of righ~ hand operand is assigned to the left hand
+                perand. Here are some examples of assignment expressions</p>
+            <p class="betDec">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspx = 2
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/* 2 is assigned to x */ </p>
+            <p class="betDec">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspy = 100
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/* 100 is assigned to y */ </p>
+            <p class="betDec">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspz = x+y
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/* Value of x+y is assigned to z */ </p>
+            <p class="noteLine">NOTE:-When the variable on the left hand side of assignment operator also occurs on
+                right hand side,then
+                we can avoid writing the variable twice by using compound assignment operators. For example:-</p>
+            <p class="betDec">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspy = y+100 &nbspcan also be written as &nbsp y
+                +=100</p>
+            <p class="betDec">Here += is a compound assignment operator.</p>
+
+            <h4 id="incrementoperator">3.Increment and Decrement Operators</h4>
+            <p class="basicAnswer">- C has two useful operators increment ( ++ ) and decrement ( - - ). These are unary
+                operators because
+                they operate on a single operand. The increment iperator ( ++ ) increments the value of the variable
+                by 1 and decrement operator ( - - ) decreases the value of the variable by 1.</p>
+            <p class="betDec">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp++x&nbsp&nbsp&nbspis equivalent to
+                &nbsp&nbsp&nbsp&nbsp x = x+1</p>
+            <p class="betDec">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp--x&nbsp&nbsp&nbspis equivalent to
+                &nbsp&nbsp&nbsp&nbsp x = x-1</p>
+
+            <p class="noteLine">These operators should be used only with variables; they can't be used with constants or
+                expressions.
+                For example the expressions ++4 or ++(x+y+z) are invalid.</p>
+            <p class="basicAnswer">-These operators are of two types</p>
+            <p class="basicAnswer">a. Prefix increment / decrement - operator is written before the operand (e.g. ++x or
+                - -x )</p>
+            <p class="basicAnswer">a. Postfix increment / decrement - operator is written after the operand (e.g. x++ or
+                x -- )</p>
+            <h5 style="font-size:x-large;">Q.What is the difference between --x(prefix) and x++(postfix)?</h5>
+            <h5>-Prefix Increment/Decrement(++x/--x)</h5>
+            <p class="basicAnswer">Here first the value of variable is incremented / decremented then the new value is
+                used in the operation
+                Let us take a variable x whose value is 5.</p>
+            <p class="basicAnswer">The statement y = ++x; means first increment the value of x by 1, then assign the
+                value of x to y
+                This single statement is equivalent to these two statements:-</p>
+            <p class="basicAnswer">x = x+1</p>
+            <p class="basicAnswer">y = x</p>
+            <p class="basicAnswer">Hence now value of x is 6 and value of y is 6.</p>
+            <h5>-Postfix Increment/Decrement(x++/x--)</h5>
+            <p class="basicAnswer">Here first the value of variable is used in the operation and then increment /
+                decrement is performed.
+                Let us take a variable y whose value is 10.</p>
+            <p class="basicAnswer">The statement x = y++; means first the value of y will be assigned to x and then y is
+                incremented by 1.
+                This single statement is equivalent to these two statements:-</p>
+            <p class="basicAnswer">x = y</p>
+            <p class="basicAnswer">y = y+1</p>
+            <p class="basicAnswer">Hence now value of x is 10 and value of y is 11.</p>
+
+            <h4 id="relationaloperator">4. Relational Operators</h4>
+            <p class="basicAnswer">Relational operators are used to compare values of two expressions.</p>
+            <img class="outputImage" style="width: 500px;" src="/images/operators in c table.jpg"
+                alt="c operators">
+            <p></p>
+            <h4 id="logicaloperator">5. Logical Or Boolean operators</h5>
+                <p class="basicAnswer">- An expression that combines two or more expressions is termed as a logical
+                    expression. For combining
+                    these expressions we use logical operators. These operators return 0 for false and 1 for true.</p>
+                <p class="basicAnswer">C has 3 logical operators.</p>
+                <img src="/images/logical operator c.jpg" alt="Logical operators in C" class="outputImage">
+                <h5>AND (&&) Operator</h5>
+                <p class="basicAnswer">This operator gives the net result true if both the conditions are true,
+                    otherwise the result is false.</p>
+                <img src="/images/AND operator in c.jpg" alt="AND operator in C" class="outputImage">
+                <p></p>
+                <p class="basicAnswer">Let us take 3 variables a = 2, b = 4 and c = 5</p>
+                <p class="basicAnswer">E.g. Suppose we have a logical expression-</p>
+                <p class="basicAnswer">(a == 2) && (b > a)</p>
+                <p class="basicAnswer">Here both the conditions are true ,and so the whole expression is true.</p>
+                <h5>OR (||) Operator</h5>
+                <p class="basicAnswer">This operator gives the net result false if both the conditions are false,
+                    otherwise the result is true.</p>
+                <img src="/images/OR operator in c.jpg" alt="OR operator in C" class="outputImage">
+                <p></p>
+                <p class="basicAnswer">Let us take 3 variables a = 2, b = 4 and c = 5</p>
+                <p class="basicAnswer">E.g. Suppose we have a logical expression-</p>
+                <p class="basicAnswer">(a == 5) && (b > a)</p>
+                <p class="basicAnswer">Here one of the conditions(second) is true ,and so the whole expression is true.
+                </p>
+                <h5>NOT (!) Operator</h5>
+                <p class="basicAnswer">This operator gives the result false if condition is true, and true if condition
+                    is false.</p>
+                <img src="/images/Not operator in c.jpg" alt="NOT operator in C" class="outputImage">
+                <p></p>
+                <p class="basicAnswer">Let us take 3 variables a = 2, b = 4 and c = 5</p>
+                <p class="basicAnswer">E.g. Suppose we have a logical expression-</p>
+                <p class="basicAnswer">! (b==5)</p>
+                <p class="basicAnswer">Here value of b==5 is false but the operator negates and now the final value is
+                    true.</p>
+                <h4 id="conditionaloperator">6. Conditional Operator</h4>
+                <p class="basicAnswer"> - Conditional operator is a ternary operator ( ? and: ) which requires three expressions as operands. This
+                    written as</p>
+                <p class="betDec">TestExpression ? expression1 : expression2 </p>
+                <p class="basicAnswer">Firstly the TestExpression is evaluated:-</p>
+                <p class="basicAnswer">a. If TestExpression is true(nonzero), then expression1 is evaluated and it becomes the value of the
+                    overall conditional expression.</p>
+                <p class="basicAnswer">b. If TestExpression is false(zero), then expression2 is evaluated and it becomes the value of the
+                    overall conditional expression.</p>
+                <p class="basicAnswer">E.g. Suppose a = 4 and b = 6 and the expression is max = a > b?a : b</p>
+                <p class="basicAnswer">The value of max will be 6 and the value of b becomes the value of expression. </p>
+                    <h4 id="commaoperator">7. Comma Operator</h4>
+                    <p class="basicAnswer">The comma operator ( , ) is used to permit different expressions to appear in situations where only
+                        one expression would be used.</p>
+
+                        <p class="betDec">For E.g. a = 2, b = 5, c = 10 can be written in one line using comma operator that would take 3 lines to declare.</p>
+                <h4 id="sizeofoperator">8. sizeof Operator</h4>
+                        <p class="basicAnswer">sizeof operator is used to calculate size of its operands that can be variable,constant or any datatype.</p>
+                        <p class="basicAnswer">E.g. sizeof(int) gives the bytes occupied by the int datatype i.e. 2.</p>
+                        <h4 id="bitwiseoperator">9. Bitwise Operator</h4>
+                        <p class="basicAnswer">C has the ability to support the manipulation of data at the bit level.</p>
+                        <p class="basicAnswer">Bitwise operators are used for
+                            operations on individual bits. Bitwise operators operate on integers only. The bitwise operators are as:-</p>
+                            <img class="outputImage" src="/images/bitwise operators in c.jpg" alt="Bitwise operator in c">
+                            <p></p>
+                        </div>
+                        <div class="basic123">
+                            <img class="outputImage" src="/images/operators c precedence.jpg" alt="c operators precedence">
+                        </div>
+                        </div>
+
+           <!-- Button links basics -->
+
+      <div id="basicsBtnLink">
+        <button class="basicBtn" style="background-color: chartreuse;"><a class="basicBtnLinks">Operators</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="ccontrolstatements.html">Loops</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="carrays.html">Arrays</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cfunctions.html">Functions</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cpointers.html">Pointers</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cstrings.html">Strings</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="basicsofC.html">Basics of C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cvariables.html">Variables in C</a></button>       
+ 
+
+    </div>
+
+
+
+        <!-- Footer -->
+    <div id="contain">
+
+        <div class="footer">
+          <ul>
+            <li><a class="inLinks" href="starpattern.html">C Program to print 'Hello World'</a> </li>
+            <li><a class="inLinks" href="mergesort.html">C program to add two numbers</a></li>
+            <li><a class="inLinks" href="cdivision.html"> C Program to find quotient,remainder</a></li>
+            <li><a class="inLinks" href="csizeof.html">C Program to find Size of Datatypes</a></li>
+            <li><a class="inLinks" href="clargestamongthreeno.html"> C Program to Check the Largest among Three Numbers</a></li>
+            <li><a class="inLinks" href="cswapping.html">C Program to Swap Two Numbers</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer">
+          <ul>
+            <li><a class="inLinks" href="cevenodd.html">C Program to Check whether a Number is Even or Odd</a></li>
+            <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using Iteration</a></li>
+            <li><a class="inLinks" href="cfactorialrecursion.html">C Program to Find Factorial of a Number using Recursion</a></li>
+            <li><a class="inLinks" href="cmultiplytable.html">C Program to Print Multiplication Table</a></li>
+            <li><a class="inLinks" href="creverse.html">C Program to Reverse a Number</a></li>
+            <li><a class="inLinks" href="cpalindrome.html">C Program to Check whether a Number is Palindrome or not</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer">
+          <ul>
+            <li><a class="inLinks" href="cchecknopositivenegative.html">C Program to Check whether a Number is Positive , Negative or Zero</a></li>
+            <li><a class="inLinks" href="carmstrong.html">C program to Check Armstrong Number</a></li>
+            
+            <li><a class="inLinks" href="csumofarrayele.html">c Program to Find Sum of All the Elements in an array</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer">
+          <ul>
+            <li><a class="inLinks" href="creversestring.html">C Program to Reverse a String</a></li>
+            <li><a class="inLinks" href="clargestinarray.html">C Program to Find Largest Element in an Array</a></li>
+            <li><a class="inLinks" href="ctranspose.html">C Program to Find Transpose of a Matrix</a></li>
+            <li><a class="inLinks" href="cpatterns.html">C Program to Print Star Pattern and other patterns</a></li>
+            <li><a class="inLinks" href="ccallbyvaluereference.html">C Program of Call by Value and Call by Reference</a></li>
+            <li><a class="inLinks" href="cpointers.html">C Program to understand Pointers</a></li>
+    
+          </ul>
+        </div>
+    
+    
+        <div class="footer">
+          <ul>
+            <li><a class="inLinks" href="clengtstring.html">C Program to Find the Length of a String</a></li>
+            <li><a class="inLinks" href="cnoofspacesstring.html">C Program to Find no. of Spaces in a String</a></li>
+            <li><a class="inLinks" href="cnoofwords.html">C Program to Calculate Number of Words in a String </a></li>
+            <li><a class="inLinks" href="cfilefunctions.html">C Program to understand File functions (fwrite,fread,fputs,fgets)</a></li>
+            <li><a class="inLinks" href="cstructuresunions.html">C Program to understand Structures and Unions</a></li>
+            <li><a class="inLinks" href="ctowerofhanoi.html">C Program to explain Tower of Hanoi.</a></li>
+            <li><a class="inLinks" href="cstack.html">C Program for stack.</a></li>
+            <li><a class="inLinks" href="cqueue.html">C Program for Queue.</a></li>
+            <li><a class="inLinks" href="clinkedlist.html">C Program for Linked List.</a></li>
+          </ul>
+        </div>
+      </div>
+    
+    
+      <!--  -->
+    
+      <div id="gap">
+        <h5 id="allGap">All</h5>
+      </div>
+    
+    
+      <!-- Summary Links -->
+    
+      <div id="sContainer">
+    
+        <div class="summary">
+          <ul>
+            <li class="summaryLinks"><a class="summaryLink">C</a> </li>
+            <li class="summaryLinks"><a class="summaryLink" href="/cplus">C++</a></li>
+            <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink" >Nodejs (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink" >php (Soon)</a></li>
+    
+          </ul>
+        </div>
+    
+      
+    
+      
+    
+        <div class="summary">
+          <ul>
+            <li class="summaryLinks"><a class="summaryLink" >Html form using html,css and javascript</a></li>
+            <li class="summaryLinks"><a class="summaryLink" >Html form with fetching data and using database</a></li>
+            
+    
+          </ul>
+        </div>
+    
+      </div>
+    
+
+
+
+        <div id="animate">
+            <h6 style="text-align: center;">Designed by Program helper</h6>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script>
+            function scrollarith() {
+                let e = document.getElementById('arithmeticoperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith2() {
+                let e = document.getElementById('assignmentoperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith3() {
+                let e = document.getElementById('incrementoperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith4() {
+                let e = document.getElementById('relationaloperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith5() {
+                let e = document.getElementById('logicaloperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith6() {
+                let e = document.getElementById('conditionaloperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith7() {
+                let e = document.getElementById('commaoperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith8() {
+                let e = document.getElementById('sizeofoperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith9() {
+                let e = document.getElementById('bitwiseoperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+            function scrollarith10() {
+                let e = document.getElementById('otheroperator');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+        </script>
+</body>
+
+</html>

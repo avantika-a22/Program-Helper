@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content=" A functions is a block of statements that is used to carry out a specific task.It is actually a subprogram.Now let's try to understand why to use functions and what are advantages of using it?....">
+
+        <meta name="title" content="Functions in C">
+        <meta name="keywords" content="Functions, functions in c,function declaration,function definition, programhelper,c programming">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>ProgramHelper - Functions in C</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="font-size:x-large;font-family: cursive;">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askedQ.html">Asked Questions</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Div  -->
+    <div id="basicsDiv">
+        <div class="basic123">
+            <h4 id="aboutCHead"> Functions</h4>
+            <p class="basicAnswer">- A functions is a block of statements that is used to carry out a specific task.It is actually a subprogram.</p>
+            <p class="noteLine">Now let's try to understand why to use functions and what are advantages of using it?</p>
+            <p class="basicAnswer">1. If we talk about programming , there are lines of codes which can be huge in numbers.So program is basically divided and it is achieved with use of functions.</p>
+            <p class="basicAnswer">2. The main reason is that if a piece of code is to be used a number of times in different places in program, we use functions.In this way repetition of codes is avoided.</p>
+            <p class="basicAnswer">3. The program becomes easy to understand, modifiable and easy to debug and test.</p>
+            <p class="basicAnswer">Now let's discuss about types of functions in C:-</p>
+            <p class="basicAnswer">1. Library functions</p>
+
+            <p class="basicAnswer">2. User-defined functions</p>
+   
+            <h5 class="betDec">&nbsp&nbspLibrary functions</h5>
+              <p class="betDec">In C, there are some predefined functions which are already there in C library.For example printf(), scanf(), strcmp() etc. are some functions that are alrady predefined and we can use them in our program.</p>
+              <p class="betDec">To use a library function, we have to include corresponding header file(stdio.h,conio.h,math.h etc.) using the preprocessor directive #include.</p>
+              <h5 id="plusaboutHead">C Program to find square root of a number</h5>
+              <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+              <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+              <p class="mainCode" style="color: green;">#include&lt;math.h></p>
+              <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+              <p class="mainCode">&nbsp&nbsp{</p>
+              <p class="mainCode">&nbsp&nbsp&nbsp&nbsp <span style="font-weight: 500;">double</span> n,root;</p>
+              <p class="mainCode">&nbsp&nbsp&nbsp&nbsp <span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter the number: </span>");</p>
+              <p class="mainCode">&nbsp&nbsp&nbsp&nbsp <span style="font-weight: 500;">scanf</span>("%lf",&n);</p>
+              <p class="mainCode">&nbsp&nbsp&nbsp&nbsp root = <span style="font-weight: 500;color: green;">sqrt</span>(n);</p>
+              <p class="mainCode">&nbsp&nbsp&nbsp&nbsp <span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Square root of number is %.2lf</span>",root);   &nbsp&nbsp&nbsp<span style="font-style: italic;color: blue;">// upto two decimal places</span></p>
+              <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbsp getch();</p> 
+              <p class="mainCode">}</p>
+              <h5>Output</h5>
+                <p class="basicAnswer">Enter a number: 25</p>
+                <p class="basicAnswer">Square root of number is 5.00</p>
+                <h4>User-defined functions</h4>
+                <p class="basicAnswer">User defined functions are functions that users can use to carry out specific task.3 points must be remembered whie using user-defined functions.</p>
+                <p class="basicAnswer">1. Function definition &nbsp&nbsp // what function will do</p>
+                <p class="basicAnswer">2. Function declaration</p>
+                <p class="basicAnswer">3. Function call</p>
+                <h5>Program to understand user-defined function</h5>
+                <p class="basicAnswer">Let's create a function to find square root of a number.</p>
+                <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                <p class="mainCode" style="color: green;">#include&lt;conio.h</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> <span style="font-weight: 500;color: indigo;">squareroot</span>(int);&nbsp&nbsp&nbsp <span style="font-style: italic;color: blue;">// function declaration</span></p>
+
+                <p class="mainCode"><span style="font-weight:500">void</span> main()</p>
+                <p class="mainCode">{</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp<span style="font-weight: 500;">int</span> number;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp<span style="font-weight: 500;">float</span> root;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter the number: </span>");</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&number);</p>
+                <p class="mainCode">&nbsp&nbsp&nbsproot = <span style="font-weight: 500;color: indigo;">squareroot</span>(number);&nbsp&nbsp&nbsp<span style="font-style:italic;color: blue;">// function call</span></p>
+                <p class="mainCode">&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">The square root of number is %f</span>",root);</p>
+                <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbspgetch();</p>
+                <p class="mainCode">}</p>
+                
+                <p class="mainCode"><span style="font-weight: 500;">int</span> <span style="font-weight:500;color: indigo;">squareroot</span>(int num)&nbsp&nbsp&nbsp <Span style="font-style: italic;color: blue;">// defining function</Span></p>
+                
+                <p class="mainCode">{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp<span style="font-weight: 500;">float</span> temp, sqrt;</p>
+                <p class="mainCode">&nbsp&nbsp&nbspssqrt = number/2;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsptemp = 0;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp<span>while</span>(sqrt ! = temp){</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptemp = sqrt;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspsqrt = (number / temp + temp) / 2;</p>
+                <p class="mainCode">}</p>
+                <p class="mainCode"><span style="font-weight: 500;">return</span> sqrt;</p>
+                <p class="mainCode">}</p>
+                <h5>Output</h5>
+                <p class="betDec">Enter the number: 16</p>
+                <p class="betDec">The square root of number is 4.0</p>
+                
+              
+        </div>
+        <div class="basic123">
+            <h4>Function Arguments </h4>
+            <p class="basicAnswer">The calling function sends some values to the called function for communication; these values are called
+                arguments or parameters</p>
+                <h5>Actual arguments</h5>
+                <p class="basicAnswer">: The arguments which are mentioned in the function cali are known as actual
+                    arguments, since these are the values which are actually sent to the called function. Actual.arguments
+                    can be written in the form of variables, constants or expressions or any function call that returns a
+                    value, For example:- In the above program, number is the actual argument
+                    </p>
+                    <h5>Formal arguments</h5>
+                    <p class="basicAnswer">The name of the arguments, which are mentioned in the function definition are
+                        called formal or dummy arguments since they are used just to hold the values that are sent by the calling
+                        function.</p>
+                        <p class="basicAnswer">For example,in the above program, num is the formal argument</p>
+        </div>
+        <div class="basic123">
+            <h4>Types of Functions</h4>
+            <p class="basicAnswer">1. Functions with no arguments and no return value.</p>
+            <p class="mainCode"><span>void</span> <span style="font-weight: 500;color: indigo;">function</span>(void);</p>
+            <p class="mainCode">main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp........</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspfunc();</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">}</p>
+            <p class="mainCode">void function(void)</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspstatement;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">}</p>
+            <p class="basicAnswer">2. Functions with no arguments but a return value.</p>
+            <p class="mainCode">int function(void);</p>
+       
+        
+            <p class="mainCode">main()</p>
+            <p class="mainCode">{</p>
+
+             <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspint r;</p>   
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp........</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspr = func();</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">}</p>
+            <p class="mainCode">int function(void)</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspreturn (expression);</p>
+   
+            <p class="basicAnswer">3. Functions with arguments but no return value.</p>
+            <p class="mainCode">void function(int,int);</p>
+       
+        
+            <p class="mainCode">main()</p>
+            <p class="mainCode">{</p>
+
+             <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp.......</p>   
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp........</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspr = func(a,b);</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">}</p>
+            <p class="mainCode">void function(int x,int y)</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">}</p>
+            <p class="basicAnswer">4. Functions with arguments and return value.</p>
+            <p class="mainCode">int function(int);</p>
+       
+        
+            <p class="mainCode">main()</p>
+            <p class="mainCode">{</p>
+
+             <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspint r;</p>   
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp........</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspr = func(x,y);</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">}</p>
+            <p class="mainCode">int function(int x,int y)</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp......</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbspreturn (expression);</p>
+            <p class="mainCode">}</p>
+        </div>
+
+    </div>
+
+    <!-- Button links basics -->
+
+    <div id="basicsBtnLink">
+        <button class="basicBtn"><a class="basicBtnLinks" href="coperators.html">Operators</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="ccontrolstatements.html">Loops</a></button>
+        <button class="basicBtn" ><a class="basicBtnLinks" href="carrays.html">Arrays</a></button>
+        <button class="basicBtn" style="background-color: chartreuse;"><a class="basicBtnLinks">Functions</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cpointers.html">Pointers</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cstrings.html">Strings</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="basicsofC.html">Basics of C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cvariables.html">Variables in C</a></button>
+
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <div id="contain">
+
+        <div class="footer">
+            <ul>
+              <li><a class="inLinks" href="chelloWorld.html">C Program to print 'Hello World'</a> </li>
+              <li><a class="inLinks" href="caddition.html">C program to add two numbers</a></li>
+              <li><a class="inLinks" href="cdivision.html"> C Program to find quotient,remainder</a></li>
+              <li><a class="inLinks" href="csizeof.html">C Program to find Size of Datatypes</a></li>
+              <li><a class="inLinks" href="clargestamongthreeno.html"> C Program to Check the Largest among Three Numbers</a></li>
+              <li><a class="inLinks" href="cswapping.html">C Program to Swap Two Numbers</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer">
+            <ul>
+              <li><a class="inLinks" href="cevenodd.html">C Program to Check whether a Number is Even or Odd</a></li>
+              <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using Iteration</a></li>
+              <li><a class="inLinks" href="cfactorialrecursion.html">C Program to Find Factorial of a Number using Recursion</a></li>
+              <li><a class="inLinks" href="cmultiplytable.html">C Program to Print Multiplication Table</a></li>
+              <li><a class="inLinks" href="creverse.html">C Program to Reverse a Number</a></li>
+              <li><a class="inLinks" href="cpalindrome.html">C Program to Check whether a Number is Palindrome or not</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer">
+            <ul>
+              <li><a class="inLinks" href="cchecknopositivenegative.html">C Program to Check whether a Number is Positive , Negative or Zero</a></li>
+              <li><a class="inLinks" href="carmstrong.html">C program to Check Armstrong Number</a></li>
+              
+              <li><a class="inLinks" href="csumofarrayele.html">C Program to Find Sum of All the Elements in an array</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer">
+            <ul>
+              <li><a class="inLinks" href="creversestring.html">C Program to Reverse a String</a></li>
+              <li><a class="inLinks" href="clargestinarray.html">C Program to Find Largest Element in an Array</a></li>
+              <li><a class="inLinks" href="ctranspose.html">C Program to Find Transpose of a Matrix</a></li>
+              <li><a class="inLinks" href="cpatterns.html">C Program to Print Star Pattern and other patterns</a></li>
+              <li><a class="inLinks" href="ccallbyvaluereference.html">C Program of Call by Value and Call by Reference</a></li>
+              <li><a class="inLinks" href="cpointers.html">C Program to understand Pointers</a></li>
+      
+            </ul>
+          </div>
+      
+      
+          <div class="footer">
+            <ul>
+              <li><a class="inLinks" href="clengtstring.html">C Program to Find the Length of a String</a></li>
+              <li><a class="inLinks" href="cnoofspacesstring.html">C Program to Find no. of Spaces in a String</a></li>
+              <li><a class="inLinks" href="cnoofwords.html">C Program to Calculate Number of Words in a String </a></li>
+              <li><a class="inLinks" href="cfilefunctions.html">C Program to understand File functions (fwrite,fread,fputs,fgets)</a></li>
+              <li><a class="inLinks" href="cstructuresunions.html">C Program to understand Structures and Unions</a></li>
+              <li><a class="inLinks" href="ctowerofhanoi.html">C Program to explain Tower of Hanoi.</a></li>
+              <li><a class="inLinks" href="cstack.html">C Program for stack.</a></li>
+              <li><a class="inLinks" href="cqueue.html">C Program for Queue.</a></li>
+              <li><a class="inLinks" href="clinkedlist.html">C Program for Linked List.</a></li>
+            </ul>
+          </div>
+    </div>
+
+
+    <!--  -->
+
+    <div id="gap">
+        <h5 id="allGap">All</h5>
+    </div>
+
+
+    <!-- Summary Links -->
+
+    <div id="sContainer">
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink">C</a> </li>
+                <li class="summaryLinks"><a class="summaryLink" href="/cplus">C++</a></li>
+                <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink" >Nodejs (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink" >php (Soon)</a></li>
+
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink" >Html form using html,css and javascript</a>
+                </li>
+                <li class="summaryLinks"><a class="summaryLink" >Html form with fetching data and using
+                        database</a></li>
+              
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

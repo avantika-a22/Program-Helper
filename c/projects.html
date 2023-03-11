@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Functional Car, Clock...">
+    <meta name="title" content="Programhelper - projects">
+    <meta name="keywords"
+        content=" car program,analog clock in html,html projects">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/projectstyle.css">
+    
+    <title>Programhelper - Projects</title>
+</head>
+
+<body onload="javascript:anim()">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:powderblue ">
+        <a class="navbar-brand" href="#">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askedQ.html">Asked Questions</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Div  -->
+
+
+    <h3 class="projectHead32">🙄 Functional Car </h3>
+    <div id="containerCar">
+
+        <div id="carcontain">
+            <img src="images/car.png" id="car">
+        </div>
+        <div id="frontTyre">
+            <img src="images/Untitled-1 copy (2).png" class="tyre" id="t1">
+        </div>
+        <div id="rearTyre">
+            <img src="images/Untitled-1 copy (2).png" class="tyre" id="t2">
+        </div>
+
+    </div>
+    <div id="btncnt">
+        <button class="probtn" id="start" onclick="start()"><img class="img" src="images/start-stop btn (2).png"></button>
+        <button class="probtn" id="horn" onclick="horn()"><img class="img" src="images/horn (2).jpg"></button>
+    </div>
+
+
+
+    <!-- Project Car Source Code -->
+
+
+    <textarea id="procntCode44" readonly>
+    <!-- Below is the source code of above Car Project  -->
+    <!-- Make sure you have downloaded files like car body,wheels,images used in the project -->
+    <!-- Images use and sounds used are attached below -->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+        body{
+            background-color: tan;
+        }
+        #containerCar{
+            width: 98vw;
+            height: auto;
+            position: relative;
+            background-color: cadetblue;
+        }
+        #car{
+            width: 100%;
+            height: 100%;
+        }
+        #t1{
+          width: 100%;  
+          height: 100%;
+          animation: rotate linear .6s infinite;
+        }
+        
+        #t2{
+            height: 100%;
+            width: 100%;
+            animation: rotate linear .6s infinite;
+        }
+        #frontTyre{
+            position: absolute;
+            top: 15.2vw;
+            left: 9.5vw;
+            width: 15.5vw;
+        }
+        #rearTyre{
+            position: absolute;
+            top: 15.5vw;
+            left: 72vw;
+            width: 15vw;
+        }
+        .projectHead32{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom-style: inset;
+            padding-bottom: 12px;
+            color: snow;
+        }
+        #horn{
+            border-radius: 50%;
+        }
+        .btn{
+            margin-bottom: 50px;
+            width: 150px;
+            height: 100px;
+            box-shadow:10px 10px 8px #888888;
+            margin-left: 20vw;
+        }
+        #btncnt{
+            margin-top: 20px;
+        }
+        .btn:hover{
+            box-shadow: 1px 1px 3px #888888;
+        }
+        #procntCode44{
+            width: 98vw;
+            height: 400px;
+            overflow-y: scroll;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        
+        @keyframes rotate {
+         100%{
+             transform: rotate(360deg);
+         }   
+        }
+        @media screen and (max-width: 800px){
+            .btn{
+                margin-left: 10vw;
+                width: 30vw;
+                 height: 80px;
+            }
+        }
+        </style>
+</head>
+<body>
+<h3 class="projectHead32">🙄  Functional Car </h3>
+<div id="containerCar">
+    <div id="carcontain">
+        <img src="car.png" id="car">
+    </div>
+   <div id="frontTyre">
+       <img src="wheel.png" class="tyre" id="t1">
+</div>
+    <div id="rearTyre">
+        <img src="wheel.png" class="tyre" id="t2">
+    </div>
+    
+</div>
+<div id="btncnt">
+<button class="probtn" id="start" onclick="start()" ><img class="img" src="start-stop btn.png"></button>
+<button class="probtn" id="horn" onclick="horn()"><img class="img" src="horn.jpg"></button>
+</div>
+
+
+<script>
+    var flag = 0;
+    const staaudio = new Audio("engine sound.mp3");
+    function anim() {
+        document.getElementById("t1").style.animationPlayState = "paused";
+        document.getElementById("t2").style.animationPlayState = "paused";
+    }
+    function horn() {
+        const audio = new Audio("horn sound.mp3");
+        audio.play();
+    }
+
+    function start() {
+        if (flag == 0) {
+
+            staaudio.play();
+            flag = 1;
+            document.getElementById("t1").style.animationPlayState = "running";
+            document.getElementById("t2").style.animationPlayState = "running";
+        }
+        else {
+            document.getElementById("t1").style.animationPlayState = "paused";
+            document.getElementById("t2").style.animationPlayState = "paused";
+            staaudio.pause();
+            flag = 0;
+        }
+    }
+
+</script>
+</body>
+</html>
+</textarea>
+
+    <!-- Download  -->
+
+    <div id="containdnldele51">
+        <div style="margin: 5px;">
+        <button class="btn-primary" onclick="Copy(procntCode44)">Copy above Code</button>
+    </div>
+
+        <div class="dnlContent">
+            <h7 style="color: white;text-decoration:underline;text-align: center;">Download links for props</h7>
+            <ul>
+                <li class="denlli33"><a href="images/car.png" download="car body">Image</a></li>
+                <li class="denlli33"><a href="images/Untitled-1 copy (2).png" download="wheel">Wheel</a></li>
+                <li class="denlli33"><a href="images/start-stop btn (2).png" download="start-stop btn">start-stop Button
+                        Image</a></li>
+                <li class="denlli33"><a href="images/horn (2).jpg" download="horn">Horn Image</a></li>
+                <li class="denlli33"><a href="Sounds/JeepChrkeHornHonkS PE894406.mp3" download="horn sound">Horn
+                        sound</a></li>
+                <li class="denlli33"><a href="Sounds/salamisound-1020049-car-start-the-engine-and-the.mp3"
+                        download="engine sound">Engine start sound</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+<!-- Clock 2-->
+
+
+<h3 class="projectHead32">🙄 Analog Clock </h3>
+<div class="clock">
+    <div class="hour">
+        <div class="hr"></div>
+    </div>
+    <div class="minute">
+        <div class="min"></div>
+    </div>
+    <div class="second">
+        <div class="sec"></div>
+    </div>
+</div>
+
+
+
+
+<!-- Project clock Source Code -->
+
+
+<textarea id="prodc23" readonly>
+<!-- Below is the source code of Analog Clock Project  -->
+<!-- Make sure you have downloaded files (props) used in the project -->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+    *{
+        box-sizing: border-box;
+        padding:0;
+        margin: 0;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:whitesmoke;
+        height: 100vh;
+    }
+ .clock
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:250px;
+        width: 250px;
+        background: url('original.png');
+        background-size: cover;
+        border-radius: 50%;
+        box-shadow:inset 2px 3px 12px 3px gainsboro;
+        border: 15px solid white;
+    }
+        .clock::before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: navy;
+        border-radius:50%;
+    }
+    .hour, .minute, .second {
+        position:absolute;
+    }
+    .hour , .hr{
+        height: 100px;
+        width: 100px;
+        justify-content: center;
+        display: flex;
+    }
+    .hr::before
+
+    {
+        content:'';
+        position: absolute;
+        width:6px;
+        height: 50px;
+
+     background: palegreen;
+     border-radius: 6px 6px 0 0;
+    }
+    .minute , .min{
+        height: 130px;
+        width: 130px;
+        justify-content: center;
+        display: flex;
+    }
+    .min::before
+
+    {
+        content:'';
+        position: absolute;
+        width:4px;
+        height: 70px;
+
+     background: gray;
+     border-radius: 6px 6px 0 0;
+    }
+    .second , .sec{
+        height: 150px;
+        width: 150px;
+        justify-content: center;
+        display: flex;
+    }
+    .sec::before
+
+    {
+        content:'';
+        position: absolute;
+        width:3px;
+        height: 80px;
+
+     background:black;
+     border-radius: 6px 6px 0 0;
+    }
+   
+
+</style>
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr"></div>
+        </div>
+        <div class="minute">
+            <div class="min"></div>
+        </div>
+        <div class="second">
+            <div class="sec"></div>
+        </div>
+    </div>
+    <script>
+        const hr = document.querySelector('.hr');
+        const min = document.querySelector('.min');
+        const sec = document.querySelector('.sec');
+        setInterval(() =>{
+            let today = new Date();
+            let hours = today.getHours()*30;
+            let mins = today.getMinutes()*6;
+            let secs = today.getSeconds()*6;
+
+            hr.style.transform = `rotateZ(${hours+(mins/12)}deg)`;
+            min.style.transform = `rotateZ(${mins}deg)`;
+            sec.style.transform = `rotateZ(${secs}deg)`;
+
+        })
+</script>
+</body>
+</html>
+</textarea>
+<!-- Code for car ends -->
+
+
+
+<!-- Download Content Clock -->
+
+<div id="containdnldele51">
+    <div style="margin: 5px;">
+    <button class="btn-primary" onclick="Copy(prodc23)">Copy above Code</button>
+</div>
+
+    <div class="dnlContent">
+        <h7 style="color: white;text-decoration:underline;text-align: center;">Download links for props</h7>
+        <ul>
+            <li class="denlli33"><a href="images/original.png" download="original">Clock Image</a></li>
+           
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- Footer -->
+
+
+
+
+
+
+
+
+
+    <!--  -->
+
+
+
+
+    <!-- Summary Links -->
+
+    <div id="sContainer">
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink" href="cindex.html">C</a> </li>
+                <li class="summaryLinks"><a class="summaryLink" href="/cplus">C++</a></li>
+                <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- Last section -->
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+       
+
+  
+    <script src="js/project.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

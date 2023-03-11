@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Generally when we terminate our programs, all the data is lost because its in volatile memory.If the data has to be used later, then it becomes necessary to keep it in permanent storage device. C support
+    the concept of files through which data can be stored on the disk or secondary storage device. The
+    stored data can be read whenever required">
+        <meta name="title" content="File Handling in C">
+        <meta name="keywords" content="File Handling, files in c,open files,close,read/write files in c language, programhelper,c programming">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <title>ProgramHelper - File Handling in C</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:powderblue ">
+        <a class="navbar-brand">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askedQ.html">Asked Questions</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Div  -->
+    <div id="container">
+        <h4 id="aboutCHead">File Handling in C</h4>
+        <p class="basicAnswer">Generally when we terminate our programs, all the data is lost because its in volatile memory.If the data has to be used later, then it becomes necessary to keep it in permanent storage device. C support
+            the concept of files through which data can be stored on the disk or secondary storage device. The
+            stored data can be read whenever required.</p>
+        <p class="noteLine">There are two ways of storing data on files first is text mode and second is binary mode.
+            Text mode is easily readably by humans but binary mode is not readable.
+        </p>
+        <p class="basicAnswer">The three basic steps for file operations are :</p>
+        <p class="basicAnswer"> - Opening of file</p>
+        <p class="basicAnswer"> - Read or write</p>
+        <p class="basicAnswer"> - Closing the file</p>
+        <p class="betDec">1. To open a file fopen() function is used.For example:- fopen("myfile.txt","w");</p>
+        <p class="betDec">2. To close a file fclose() function is used.</p>
+        <p class="basicAnswer">Now there are multiple modes in which files can be opened:-</p>
+        <p class="basicAnswer">1. "w" (write) - If the file doesn't exist then this mode creates a new file for writing, and if the file already exists then
+            the previous data is erased and the new data entered is written to the file.</p>
+        <p class="basicAnswer">2. "a" (append) - If the file doesn't exist then this mode creates a new file, and if the file already exists then the new 
+            data entered is appended at the end of existing data. In this mode, the data existing in the file is
+            erased as in "w" mode.</p>
+        <p class="basicAnswer">3. "r" (read) - It is used for opening an existing file for reading purpose only. The file to be opened must
+            exist and the previous data of file is not erased.</p>
+        <p class="basicAnswer">4. "w+" (write + read) - It is same as "w" mode but in this mode we can also read and modify the data. If the
+          file  doesn't exist then a new file is created and if the file exists then previous data is erased.</p>
+        <p class="basicAnswer">5. "r+" (read + write) - This mode is same as "r" mode but in this mode we can also write and modify existing data. The
+           file that has to be opened must exist and the previous data of file is not erased. Since we can add new data
+         modify existing data so this mode is also called update mode</p>
+        <p class="basicAnswer">6. "a+" (append + read) - It is same as the "a" mode but in this we can also read the data stored in the file. If
+            the file doesn't exist, a new file is created and if the file already exists then new data is appended at
+            the end of existing data. We cannot modify existing data in this mode.</p>
+            <h4>&nbspProgram to understand File functions.</h4>
+            <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+            <p class="mainCode"><span style="font-weight: 500;">int</span> main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbspFILE *fp ;</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">char</span> data[50] ;</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>( "<span style="font-weight: 500;color: mediumblue;">Opening the file myFile.c in read mode</span>") ;</p>
+            <p class="mainCode">&nbsp&nbspfp = fopen( "<span style="font-weight: 500;color: mediumblue;">myFile.c</span>", "<span style="font-weight: 500;color: mediumblue;">r</span>" ) ;</p>
+            <p class="mainCode"> &nbsp&nbsp<span style="font-weight: 500;">if</span> ( fp == NULL )</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>( "<span style="font-weight: 500;color: mediumblue;">Could not open file</span>" ) ;</p>
+            <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn 1;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp}</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>( "<span style="font-weight: 500;color: mediumblue;">Reading the file myFile.c</span>" ) ;</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">while</span>( fgets ( data, 50, fp ) != NULL )</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>( "%s" , data ) ;</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Closing the file</span>") ;</p>
+            <p class="mainCode">&nbsp&nbspfclose(fp) ;</p>
+            <p class="mainCode" style="font-weight: 500;">&nbsp&nbspreturn 0;</p>
+
+            <p class="mainCode">}</p>
+            <h5 id="outputTag">&nbspOutput</h5>
+
+            <p class="basicAnswer">Opening the file myFile.c in read mode</p>
+            <p class="basicAnswer">Reading the file myFile.c</p>
+            <p class="basicAnswer">Hey,I am Rishi.</p>
+            <p class="basicAnswer">Closing the file</p>
+    </div>
+    <div id="container">
+        <h4 id="plusaboutHead">Other functions in File Handling</h4>
+        <p class="tellAbout">feof() - It finds end of file.</p>
+        <p class="basicAnswer">getw() - It reads an integer from a file</p>
+
+
+        <p class="basicAnswer">putw() - It writes an integer to file</p>
+        <p class="basicAnswer">fgetc() - It reads a character from file.</p>
+        <p class="basicAnswer">fputc()  - It write a character to file.</p>
+        <p class="basicAnswer">fgets() - It reads string from a file, one line at a time.</p>
+        <p class="basicAnswer">fputs() - It writes string to a file.</p>
+        
+        <p class="basicAnswer">gets() - It reads line from keyboard.</p>
+        <p class="basicAnswer">puts() - It writes line to output screen.</p>
+        <p class="basicAnswer">sprintf() - It  writes formatted output to string.</p>
+
+        <p class="basicAnswer">remove() - This function deletes a file.</p>
+        <p class="basicAnswer">fflush() - This function flushes a file.</p>
+        <p class="basicAnswer">ftell() - It returns current position of file pointer</p>
+        <p class="basicAnswer">fseek() - This function moves file pointer position to given location.</p>
+        <p class="basicAnswer">fscanf() - It reads formatted data from a file.</p>
+        <p class="basicAnswer">fprintf() - This function writes formatted data to a file.</p>
+
+        <p class="basicAnswer">rewind() - This function moves file pointer position to the beginning of the file.</p>
+        <p class="basicAnswer">getc() - It reads character from file.</p>
+        <p class="basicAnswer">SEEK_SET - This function moves file pointer position to the beginning of the file.</p>
+
+        <p class="basicAnswer">SEEK_CUR - This function moves file pointer position to given location. </p>
+        <p class="basicAnswer">SEEK_END - This function moves file pointer position to the end of file.</p>
+        <p class="basicAnswer">sscanf() - It reads formatted input from a string.</p>
+
+        <p class="basicAnswer">fgetchar() - This function reads a character from keyboard.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Button links basics -->
+
+    <div id="basicsBtnLink">
+        <button class="basicBtn"><a class="basicBtnLinks" href="csorting.html">Sorting</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="coperators.html">Operators</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="ccontrolstatements.html">Loops</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="carrays.html">Arrays</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cfunctions.html">Functions</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cpointers.html">Pointers</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cstrings.html">Strings</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="basicsofC.html">Basics of C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cvariables.html">Variables in C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="aboutcdatastructures.html">Data Structure</a></button>
+
+    </div>
+    <!-- Footer -->
+    <div id="contain">
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="chelloWorld.html">C Program to print 'Hello World'</a> </li>
+                <li><a class="inLinks" href="caddition.html">C program to add two numbers</a></li>
+                <li><a class="inLinks" href="cdivision.html"> C Program to find quotient,remainder</a></li>
+                <li><a class="inLinks" href="csizeof.html">C Program to find Size of Datatypes</a></li>
+                <li><a class="inLinks" href="clargestamongthreeno.html"> C Program to Check the Largest among Three
+                        Numbers</a></li>
+                <li><a class="inLinks" href="cswapping.html">C Program to Swap Two Numbers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="cevenodd.html"> C Program to Check whether a Number is Even or Odd</a></li>
+                <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using
+                        Iteration</a></li>
+                <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using
+                        Recursion</a></li>
+                <li><a class="inLinks" href="cmultiplytable.html">C Program to Print Multiplication Table</a></li>
+                <li><a class="inLinks" href="creverse.html">C Program to Reverse a Number</a></li>
+                <li><a class="inLinks" href="cpalindrome.html">C Program to Check whether a Number is Palindrome or
+                        not</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="cchecknopositivenegative.html">C Program to Check whether a Number is
+                        Positive , Negative or Zero</a></li>
+                <li><a class="inLinks" href="carmstrong.html">C program to Check Armstrong Number</a></li>
+
+                <li><a class="inLinks" href="csumofarrayele.html">c Program to Find Sum of All the Elements in an
+                        array</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="creversestring.html">C Program to Reverse a String</a></li>
+                <li><a class="inLinks" href="clargestinarray.html">C Program to Find Largest Element in an Array</a>
+                </li>
+                <li><a class="inLinks" href="ctranspose.html">C Program to Find Transpose of a Matrix</a></li>
+                <li><a class="inLinks" href="cpatterns.html">C Program to Print Star Pattern and other patterns</a></li>
+                <li><a class="inLinks" href="ccallbyvaluereference.html">C Program of Call by Value and Call by
+                        Reference</a></li>
+                <li><a class="inLinks" href="cpointers.html">C Program to understand Pointers</a></li>
+
+            </ul>
+        </div>
+
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="clengtstring.html">C Program to Find the Length of a String</a></li>
+                <li><a class="inLinks" href="cnoofspacesstring.html">C Program to Find no. of Spaces in a String</a>
+                </li>
+                <li><a class="inLinks" href="cnoofwords.html">C Program to Calculate Number of Words in a String </a>
+                </li>
+                <li><a class="inLinks" style="color: teal;">C Program to understand File functions
+                        (fwrite,fread,fputs,fgets)</a></li>
+                <li><a class="inLinks" href="cstructuresunions.html">C Program to understand Structures and Unions</a>
+                </li>
+                <li><a class="inLinks" href="ctowerofhanoi.html">C Program to explain Tower of Hanoi.</a></li>
+                <li><a class="inLinks" href="cstack.html">C Program for stack.</a></li>
+                <li><a class="inLinks" href="cqueue.html">C Program for Queue.</a></li>
+                <li><a class="inLinks" href="clinkedlist.html">C Program for Linked List.</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!--  -->
+
+    <div id="gap">
+        <h5 id="allGap">All</h5>
+    </div>
+
+
+    <!-- Summary Links -->
+
+    <div id="sContainer">
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink">C</a> </li>
+                <li class="summaryLinks"><a class="summaryLink" href="/cplus">C++</a></li>
+                <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a>
+                </li>
+                <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using
+                        database</a></li>
+               
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- Last section -->
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

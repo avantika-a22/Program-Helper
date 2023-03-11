@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="#include<stdio.h> #include<conio.h> #include<malloc.h> void main() {....">
+      <meta name="title" content="C Program to understand Linked List">
+      <meta name="keywords" content="c program to understand Linked liat, implementation of array using linked list, programhelper,c linked list,c programming">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    
+    <title>ProgramHelper - C Program to understand Linked list.</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:powderblue ">
+      <a class="navbar-brand">ProgramHelper</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="askedQ.html">Asked Questions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+        </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Div  -->
+    <div id="container">
+        <h4 id="plusaboutHead">C Program to understand Linked list.</h4>
+        <p></p>
+        <p class="mainCode" style="color: green;"> #include&lt;conio.h></p>
+           <p class="mainCode" style="color: green;"> #include&lt;stdio.h></p>
+           <p class="mainCode" style="color: green;"> #include&lt;malloc.h></p>
+           <p class="mainCode"><span style="font-weight: 500;">struct</span> <span style="font-weight: 500;color: indigo;">node</span></p>
+           <p class="mainCode">{</p>
+           <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> item;</p>
+           <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">node</span> <span style="font-weight: 500;color: blue;">*next</span>;</p>
+           <p class="mainCode">} <span style="font-weight: 500;color: blue;">*start</span>;</p>
+
+            <p class="tellAbout">// Function to create linked list</p>
+
+           <p class="mainCode"><span style="font-weight: 500;">void</span> <span style="font-weight: 500;color: indigo;">create</span>(int data)</p>
+           <p class="mainCode">{</p>
+           <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">struct</span> <span style="font-weight: 500;color: indigo;">node</span> *p,*tmp;</p>
+           <p class="mainCode">&nbsp&nbspp = (struct node *)<span style="font-weight: 500;color: lightsalmon;">malloc</span>(sizeof(struct node));</p>
+           <p class="mainCode">&nbsp&nbspp->item=data;</p>
+            <p class="mainCode">&nbsp&nbspp->next=start;</p>
+           <p class="mainCode">&nbsp&nbspstart = p;</p>
+           <p class="mainCode">}</p>
+           <p class="tellAbout">// Function to add data to beginning of list</p>
+           <p class="mainCode"><span style="font-weight: 500;">void</span> <span style="font-weight: 500;color: indigo;">addbeginning</span>(int data)</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;color: indigo;">struct</span> node *p;</p>
+               <p class="mainCode">&nbsp&nbspp=(struct node *)<span style="font-weight: 500;color: lightsalmon;">malloc</span>(sizeof(struct node));</p>
+               <p class="mainCode">&nbsp&nbspp -> item = data;</p>
+                <p class="mainCode">&nbsp&nbspp -> next = start;</p>
+                    <p class="mainCode">&nbsp&nbspstart = p;</p>
+               <p class="mainCode"> }</p>
+               <p class="tellAbout">// Function to add data to last of list</p>
+               <p class="mainCode"><span style="font-weight: 500;">void</span> <span style="font-weight: 500;color: indigo;">addLast</span>(int data)</p>
+                  <p class="mainCode">{</p>
+                  <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;color: indigo;">struct</span> node *p,*tmp;</p>
+                    <p class="mainCode">&nbsp&nbspp=(struct node *)<span style="font-weight: 500;color: lightsalmon;">malloc</span>(sizeof(struct node));</p>
+                    <p class="mainCode">&nbsp&nbsptmp=start;</p>
+                    <p class="mainCode">&nbsp&nbspp->item=data;</p>
+                   <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">while</span>(tmp->next!=NULL)</p>
+                   <p class="mainCode">&nbsp&nbsp{</p>
+                   <p class="mainCode">&nbsp&nbsp&nbsp&nbsptmp = tmp -> next;</p>
+               <p class="mainCode">&nbsp&nbsp}</p>
+            <p class="mainCode">&nbsp&nbsptmp -> next = p;</p>
+            <p class="mainCode">&nbsp&nbspp -> next = NULL;</p>
+           <p class="mainCode">}</p>
+           <p class="tellAbout">// Function to add data in between list</p>
+            <p class="mainCode"><span style="font-weight:500">void</span> <span style="font-weight:500;color: indigo;">addmiddle</span>(int data, int after)</p>
+              <p class="mainCode"> {</p>
+                  <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">struct</span> node *p,*tmp; </p>
+                
+              <p class="mainCode">&nbsp&nbspp=(<span style="font-weight: 500;">struct</span> <span style="font-weight: 500
+              ;color: indigo;">node *</span> )<span style="font-weight: 500;color: lightsalmon;">malloc</span>(sizeof(struct node));</p>
+               <p class="mainCode">&nbsp&nbsptmp=start;</p>
+                <p class="mainCode">&nbsp&nbspp->item=after;</p>
+                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">while</span>(tmp->item!=data)</p>
+                <p class="mainCode">&nbsp&nbsp{</p>
+                  <p class="mainCode">&nbsp&nbsp&nbsp&nbsptmp = tmp -> next;</p>
+           <p class="mainCode">&nbsp&nbsp}</p>
+           <p class="mainCode">&nbsp&nbspp -> next = tmp -> next;</p>
+           <p class="mainCode">&nbsp&nbsptmp -> next = p;</p>
+               <p class="mainCode">&nbsp&nbsp}</p>
+               <p class="mainCode"><span style="font-weight: 500;">void</span> <span style="font-weight: 500;color: indigo;">deletebeginning</span>()</p>
+              <p class="mainCode">{</p>
+                   <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">struct</span> node *p;</p>
+               <p class="mainCode">&nbsp&nbspp = start;</p>
+            <p class="mainCode">&nbsp&nbspstart = start -> next;</p>
+           <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;color: indianred;">free</span>(p);<span style="color: blue;">&nbsp&nbsp&nbsp&nbsp// to free the memory</span></p>
+           <p class="mainCode">}</p>
+           <p class="tellAbout">// Function to delete data from last</p>
+                <p class="mainCode"><span style="font-weight: 500;">void</span> <span style="font-weight: 500;color:indigo;">deletelast()</span></p>
+               <p class="mainCode">{</p>
+               <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">struct</span> node *p;</p>
+               <p class="mainCode">&nbsp&nbspp = start;</p>
+               <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">while</span>(p -> next -> next != NULL)</p>
+               <p class="mainCode">&nbsp&nbsp{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbspp = p -> next;</p>
+                    <p class="mainCode">&nbsp&nbsp}</p>
+                    <p class="mainCode">p -> next = NULL;</p>
+                    <p class="mainCode">}</p>
+                    <p class="tellAbout">// Function to delete in between list</p>
+                        <p class="mainCode"><span style="font-weight: 500;">void</span> <span style="font-weight: 500;color: indigo;">deleteafter</span>(int data)</p>
+                            <p class="mainCode">{</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">struct</span> node *p;</p>
+                       <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspp = start;</p>
+                           <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">while</span>(p -> item != data)</p>
+                           <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>  
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspp = p -> next;</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                           <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspp -> next = p -> next -> next;</p>
+                       <p class="mainCode">}</p>
+
+                       <p class="tellAbout">// Function to search element in linked list</p>
+                            <p class="mainCode"><span style="font-weight: 500;">void</span> search(int data)</p>
+                    <p class="mainCode">{</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> count = 0;</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">struct</span> node *p;</p>
+                      <p class="mainCode">&nbsp&nbspp = start;</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">while</span>(p != NULL)</p>
+                      <p class="mainCode">&nbsp&nbsp{</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">if</span>(p -> item == data)</p>
+                      <p class="mainCode">&nbsp&nbsp{</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Element found at %d position</span>",count+1);</p>
+                      <p class="mainCode" style="font-weight: 500;">&nbsp&nbspreturn;</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode">p = p -> next;</p>
+                      <p class="mainCode">count ++;</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode"><span style="font-weight: 500;">if</span> (p == NULL)</p>
+                      <p class="mainCode">{</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Data not found</span>");</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode">}</p>
+                      <p class="tellAbout">// Function to reverse linked list</p>
+                      <p class="mainCode"><span style="font-weight: 500;">void</span> <span style="font-weight: 500;color: indigo;">reverse()</span></p>
+                      <p class="mainCode">{</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">struct</span> node *p1,*p2;</p>
+                      <p class="mainCode">&nbsp&nbspp1 = NULL;</p>
+                      <p class="mainCode">&nbsp&nbspp2 = NULL;</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">while</span>(start != NULL){</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspp1 = start -> next;</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstart -> next = p2;</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspp2 = start;</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstart = p1;</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode">start = p2;</p>
+                      <p class="mainCode"><span style="font-weight: 500;">while</span>(start != NULL)</p>
+                      <p class="mainCode">{</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("\n%d",start -> item);</p>
+                      <p class="mainCode">&nbsp&nbspstart = start -> next;</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode">}</p>
+                      <p class="tellAbout">// Function to display linked list</p>
+                      <p class="mainCode"><span style="font-weight: 500;">void</span> <void style="font-weight: 500;color: indigo;">display()</void></p>
+                      <p class="mainCode">{</p>
+
+                      <p class="mainCode"><span style="font-weight: 500;">int</span>  i;</p>
+                      <p class="mainCode"><span style="font-weight: 500;">struct</span> node *tmp;</p>
+                      <p class="mainCode">tmp = start;</p>
+                      <p class="mainCode"><Span style="font-weight: 500;">while</Span>(tmp -> next != NULL)</p>
+                      <p class="mainCode">{</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("data = %d",tmp -> item);</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("\n");</p>
+                      <p class="mainCode">&nbsp&nbsptmp = tmp -> next;</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>(<span style="font-weight: 500;color: mediumblue;">"data = %d"</span>,tmp -> item);</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode"><span  style="font-weight: 500;">void</span> main()</p>
+                      <p class="mainCode">{</p>
+                      <p class="mainCode"><span style="font-weight: 500;">int</span> i,choice,data,after;</p>
+                      <p class="mainCode">start = NULL;</p>
+                      <p class="mainCode"><span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">1-create-list,2-add-at-beginning,3-add-to-last,4-add-in-middle</span>");</p>
+                      <p class="mainCode"><span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">\n5-deletefirst,6-deletelast,7-deleteafter,8-display,9-search,10-reverse list,11- exit</span>");</p>
+                      <p class="mainCode"><span style="font-weight: 500;">while</span>(choice != 11)</p>
+                      <p class="mainCode">{</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">\nEnter your choice: </span>");</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&choice);</p>
+                      <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">switch</span>(choice)</p>
+                      <p class="mainCode">{</p>
+                      <p class="mainCode">&nbsp&nbspcase 1:</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter data: </span>")'</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;color: indigo;">create</span>(data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 2:</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter data: </span>");</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;color: indigo;">addbeginning</span>(data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 3:</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter data: </span>");</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;color: indigo;">addlast</span>(data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 4:</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter data you want to add after: </span>");</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("Enter data you want to add: ");</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&after);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;color: indigo;">addmiddle</span>(data,after);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 5:</p>
+                      <p class="mainCode" style="font-weight: 500;color: indigo;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspdeletebeginning();</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 6:</p>
+                      <p class="mainCode" style="font-weight: 500;color: indigo;">&nbsp&nbsp&nbsp&nbspdeletelast();</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 7:</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter data after which you want to delete: </span>");</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;color: indigo;">deleteafter</span>(data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 8:</p>
+                      <p class="mainCode" style="font-weight: 500;color: indigo;">&nbsp&nbsp&nbsp&nbspdisplay();</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 9:</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter data you want to search: </span>");</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&data);</p>
+                        
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;color: indigo;">search</span>(data);</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode">&nbsp&nbspcase 10:</p>
+                      <p class="mainCode" style="font-weight: 500;color: indigo;">&nbsp&nbsp&nbsp&nbspreverse();</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                      <p class="mainCode" style="font-weight: 500;">&nbsp&nbspdefault:</p>
+                      <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Invalid choice</span>");</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode">}</p>
+                      <p class="mainCode" style="font-weight: 500;">getch();</p>
+                      <p class="mainCode">}</p>
+
+                      
+
+
+
+           <h5 id="outputTag">Output</h5>
+           <img src="/images/linked list in c.jpg" alt="Linked list in c" class="outputImage">
+           
+   
+    </div>
+
+
+
+
+
+
+
+   <!-- Button links basics -->
+
+   <div id="basicsBtnLink">
+    <button class="basicBtn"><a class="basicBtnLinks" href="csorting.html">Sorting</a></button>
+    <button class="basicBtn"><a class="basicBtnLinks" href="coperators.html">Operators</a></button>
+    <button class="basicBtn"><a class="basicBtnLinks" href="ccontrolstatements.html">Loops</a></button>
+    <button class="basicBtn"><a class="basicBtnLinks" href="carrays.html">Arrays</a></button>
+    <button class="basicBtn"><a class="basicBtnLinks" href="cfunctions.html">Functions</a></button>
+    <button class="basicBtn"><a class="basicBtnLinks" href="cpointers.html">Pointers</a></button>
+    <button class="basicBtn"><a class="basicBtnLinks" href="cstrings.html">Strings</a></button>
+    <button class="basicBtn"><a class="basicBtnLinks" href="basicsofC.html">Basics of C</a></button>
+    <button class="basicBtn"><a class="basicBtnLinks" href="cvariables.html">Variables in C</a></button>       
+
+
+</div>
+  <!-- Footer -->
+  <div id="contain">
+
+    <div class="footer">
+      <ul>
+        <li><a class="inLinks" href="chelloWorld.html">C Program to print 'Hello World'</a> </li>
+        <li><a class="inLinks" href="caddition.html">C program to add two numbers</a></li>
+        <li><a class="inLinks" href="cdivision.html"> C Program to find quotient,remainder</a></li>
+        <li><a class="inLinks" href="csizeof.html">C Program to find Size of Datatypes</a></li>
+        <li><a class="inLinks" href="clargestamongthreeno.html"> C Program to Check the Largest among Three Numbers</a></li>
+        <li><a class="inLinks" href="cswapping.html">C Program to Swap Two Numbers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <ul>
+        <li><a class="inLinks" href="cevenodd.html">C Program to Check whether a Number is Even or Odd</a></li>
+        <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using Iteration</a></li>
+        <li><a class="inLinks" href="cfactorialrecursion.html">C Program to Find Factorial of a Number using Recursion</a></li>
+        <li><a class="inLinks" href="cmultiplytable.html">C Program to Print Multiplication Table</a></li>
+        <li><a class="inLinks" href="creverse.html">C Program to Reverse a Number</a></li>
+        <li><a class="inLinks" href="cpalindrome.html">C Program to Check whether a Number is Palindrome or not</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <ul>
+        <li><a class="inLinks" href="cchecknopositivenegative.html">C Program to Check whether a Number is Positive , Negative or Zero</a></li>
+        <li><a class="inLinks" href="carmstrong.html">C program to Check Armstrong Number</a></li>
+        
+        <li><a class="inLinks" href="csumofarrayele.html">C Program to Find Sum of All the Elements in an array</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <ul>
+        <li><a class="inLinks" href="creversestring.html">C Program to Reverse a String</a></li>
+        <li><a class="inLinks" href="clargestinarray.html">C Program to Find Largest Element in an Array</a></li>
+        <li><a class="inLinks" href="ctranspose.html">C Program to Find Transpose of a Matrix</a></li>
+        <li><a class="inLinks" href="cpatterns.html">C Program to Print Star Pattern and other patterns</a></li>
+        <li><a class="inLinks" href="ccallbyvaluereference.html">C Program of Call by Value and Call by Reference</a></li>
+        <li><a class="inLinks" href="cpointers.html">C Program to understand Pointers</a></li>
+
+      </ul>
+    </div>
+
+
+    <div class="footer">
+      <ul>
+        <li><a class="inLinks" href="clengtstring.html">C Program to Find the Length of a String</a></li>
+        <li><a class="inLinks" href="cnoofspacesstring.html">C Program to Find no. of Spaces in a String</a></li>
+        <li><a class="inLinks" href="cnoofwords.html">C Program to Calculate Number of Words in a String </a></li>
+        <li><a class="inLinks" href="cfilefunctions.html">C Program to understand File functions (fwrite,fread,fputs,fgets)</a></li>
+        <li><a class="inLinks" href="cstructuresunions.html">C Program to understand Structures and Unions</a></li>
+        <li><a class="inLinks" href="ctowerofhanoi.html">C Program to explain Tower of Hanoi.</a></li>
+        <li><a class="inLinks" href="cstack.html">C Program for stack.</a></li>
+        <li><a class="inLinks" href="cqueue.html">C Program for Queue.</a></li>
+        <li><a class="inLinks" style="color: teal;">C Program for Linked List.</a></li>
+      </ul>
+    </div>
+  </div>
+
+  
+  
+    <!--  -->
+  
+    <div id="gap">
+      <h5 id="allGap">All</h5>
+    </div>
+  
+  
+    <!-- Summary Links -->
+  
+    <div id="sContainer">
+  
+      <div class="summary">
+        <ul>
+          <li class="summaryLinks"><a class="summaryLink">C</a> </li>
+          <li class="summaryLinks"><a class="summaryLink" href="/cplus">C++</a></li>
+          <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+          <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+          <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+  
+        </ul>
+      </div>
+  
+    
+  
+    
+  
+      <div class="summary">
+        <ul>
+          <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a></li>
+          <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using database</a></li>
+         
+  
+        </ul>
+      </div>
+  
+    </div>
+  
+
+  <!-- Last section -->
+
+  <div id="animate">
+    <h6 style="text-align: center;">Designed by Program helper</h6>
+  </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

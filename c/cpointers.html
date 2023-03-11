@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Let's first try to understand how memory is organized in a computer.The memory is made up of bytes arranged in a sequential manner.....">
+        <meta name="title" content="C Pointers">
+        <meta name="keywords" content="Pointers in C, Memory management in C, how mwmory is organized, programhelper,c programming">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Pointers in C</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="font-size:x-large;font-family: cursive;">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askedQ.html">Asked Questions</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Div  -->
+    <div id="basicsDiv">
+        <div class="basic123">
+            <h4 id="aboutCHead">Pointers</h4>
+            <p class="basicAnswer">- The concept of pointers is very important if you really want to understand things, behind the scenes how actually memory management takes place , abour variables and many more things.</p>
+            <p class="basicAnswer">Let's first try to understand how memory is organized in a computer.The memory is made up of bytes arranged in a sequential manner.</p>
+            <p class="basicAnswer"><a class="jumpDirectlyLinks" onclick="jumppointers()">Jump directly to example programs related to pointers.</a></p>
+            <p class="noteLine">Each byte has an index
+                number, which is called the address of that byte. The address of these bytes start from zero and-the
+                address of last byte is one less than the size of memory</p>
+                <img src="/images/pointers in C 1.jpg" alt="pointers in c" class="outputImage">
+                <p class="basicAnswer">We have studied that it is necessary to declare a variable before using it, since compiler has to reserve
+                    space for it. The data type of the variable also has to be mentioried so that the compiler knows how
+                    much space needs to be reserved</p>
+                    <P class="basicAnswer">&nbsp&nbsp&nbsp&nbspLet's try to understand this with declaration of variable.</P>
+                    <p class="betDec">Let us suppose we declare a variable age of type int : -</p>
+                    <p class="betDec">&nbsp&nbsp&nbsp&nbsp&nbsp int age;</p>
+                     <P class="betDec">The compiler reserves 2 consecutive bytes from memory for this variable and associates the name age
+                        with it. The address of first byte from the two allocated bytes is known as the address of variable
+                        age.</p>
+                        <p class="exampleBet">If you have stored a value of type integer in a variable like :-</p> 
+                        <p class="exampleBet">&nbsp&nbsp&nbsp&nbspint age = 60;</p> 
+                        <p class="exampleBet">Now the value 20 will be stored in two consecutive bytes say for ex.(1222 and 1223) in binary form.Similarly for char, 1 byte is allocated, float is allocated 4 bytes and so on.Now the address of first byte, in this case, 1222 is the address of variable.</p>
+                        <p class="basicAnswer"></p>
+                       <h5>Pointer Variables</h5>
+                        <p class="basicAnswer">Pointer variables need to be declared before they can be used.The declaration is same as of any other variable,</p>
+                        <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbspint *pointername;</p>
+                        <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbspchar *pointername;</p>
+                        <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbspfloat *p1;</p>
+                        <p class="noteLine">One important thing that needs to be understood is, that pointers are also variables so compiler will reserve space for them and pointer variable will also have some address.</p>
+                        <p class="exampleBet">Let's understand how an array is stored in memory :-</p>
+                        <img src="/images/array stored in memory.jpg" alt="pointers array" class="outputImage">
+                        <p class="exampleBet"></p>
+                        </div>
+
+
+                        <!-- Programs related to pointers -->
+
+                        <div class="basic123" id="pointerprograms">
+                        <h4>C Program to print address of variables using address operator.</h4>
+                        <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                        <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+                        <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+                        <p class="mainCode">{</p>
+                            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> age = 10;</p>
+                            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">float</span> salary = 30000.20;</p>
+                            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Address of age = %u</span>",&age);</p>
+                            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Address of salary= %u</span>",&salary);</p>
+                            <p class="mainCode" style="font-weight: 500;">&nbsp&nbspgetch();</p>
+                            <p class="mainCode">}</p>
+                        </div>
+
+
+
+
+                        <div class="basic123">
+                            <h4>C Program to add two numbers using Pointers.</h4>
+                            <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+                            <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+                            <p class="mainCode">{</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> n1 = 80,n2 = 56;</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> *p1 = &a, *p2 = &b;</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">The sum of the two numbers: </span>");</p>
+                                <p class="mainCode">&nbsp&nbspc = *p1 + *p2;;</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">The sum of 80 and 56 is %d</span>",c);</p>
+                                <p class="mainCode" style="font-weight: 500;">&nbsp&nbspgetch();</p>
+                                <p class="mainCode">}</p>
+                                <h5 id="outputTag">Output</h5>
+                                <p class="betDec">The sum of 80 and 56 is 136</p>
+                        </div>
+                        
+                        <!-- Program for increment and decrement using pointers -->
+
+                        <div class="basic123">
+                            <h4>C Program to show increment and decrement of numbers using Pointers.</h4>
+                            <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+                            <p class="mainCode"><span style="font-weight: 500;">void</span> ref(int *x,int *y)</p>
+                            <p class="mainCode">{</p>
+                            <p class="mainCode">(*x)++;</p>
+                            <p class="mainCode">(*y)++;</p>
+                            <p class="mainCode">}</p>
+                            <p class="mainCode"><span style="font-weight: 500;">int</span> main()</p>
+                            <p class="mainCode">{</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> a = 5,b = 6;</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">int</span> *p1 = &a, *p2 = &b;</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Before calling the function :a = %d,b = %d</span>",a,b);</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;color: indigo;">ref</span>(&a,&b);</p>
+                                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">After calling the function :a = %d,b = %d</span>",a,b);</p>
+                                <p class="mainCode" style="font-weight: 500;">&nbsp&nbspgetch();</p>
+                                <p class="mainCode">}</p>
+                                <h5>Output</h5>
+                                <p class="betDec">Before calling the function :a = 5,b = 6</p>
+                                <p class="betDec">After calling the function :a = 6,b = 7</p>
+                        </div>
+                        </div>
+                        
+
+           <!-- Button links basics -->
+
+      <div id="basicsBtnLink">
+        <button class="basicBtn"><a class="basicBtnLinks" href="coperators.html">Operators</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="ccontrolstatements.html">Loops</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="carrays.html">Arrays</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cfunctions.html">Functions</a></button>
+        <button class="basicBtn" style="background-color: chartreuse;"><a class="basicBtnLinks" >Pointers</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cstrings.html">Strings</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="basicsofC.html">Basics of C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cvariables.html">Variables in C</a></button>       
+ 
+
+    </div>
+
+
+ <!-- Footer -->
+ <div id="contain">
+
+    <div class="footer">
+        <ul>
+            <li><a class="inLinks" href="chelloWorld.html">C Program to print 'Hello World'</a> </li>
+            <li><a class="inLinks" href="caddition.html">C program to add two numbers</a></li>
+            <li><a class="inLinks" href="cdivision.html"> C Program to find quotient,remainder</a></li>
+            <li><a class="inLinks" href="csizeof.html">C Program to find Size of Datatypes</a></li>
+            <li><a class="inLinks" href="clargestamongthreeno.html"> C Program to Check the Largest among Three
+                    Numbers</a></li>
+            <li><a class="inLinks" href="cswapping.html">C Program to Swap Two Numbers</a></li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li><a class="inLinks" href="cevenodd.html"> C Program to Check whether a Number is Even or Odd</a></li>
+            <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using
+                    Iteration</a></li>
+            <li><a class="inLinks" href="cfactorialrecursion.html">C Program to Find Factorial of a Number using
+                    Recursion</a></li>
+            <li><a class="inLinks" href="cmultiplytable.html">C Program to Print Multiplication Table</a></li>
+            <li><a class="inLinks" href="creverse.html">C Program to Reverse a Number</a></li>
+            <li><a class="inLinks" href="cpalindrome.html">C Program to Check whether a Number is Palindrome or
+                    not</a></li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li><a class="inLinks" href="cchecknopositivenegative.html">C Program to Check whether a Number is
+                    Positive , Negative or Zero</a></li>
+            <li><a class="inLinks" href="carmstrong.html">C program to Check Armstrong Number</a></li>
+
+            <li><a class="inLinks" href="csumofarrayele.html">C Program to Find Sum of All the Elements in an
+                    array</a></li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li><a class="inLinks" href="creversestring.html">C Program to Reverse a String</a></li>
+            <li><a class="inLinks" href="clargestinarray.html">C Program to Find Largest Element in an Array</a>
+            </li>
+            <li><a class="inLinks" href="ctranspose.html">C Program to Find Transpose of a Matrix</a></li>
+            <li><a class="inLinks" href="cpatterns.html">C Program to Print Star Pattern and other patterns</a></li>
+            <li><a class="inLinks" href="ccallbyvaluereference.html">C Program of Call by Value and Call by
+                    Reference</a></li>
+            <li><a class="inLinks" style="color: teal;">C Program to understand Pointers</a></li>
+
+        </ul>
+    </div>
+
+
+    <div class="footer">
+        <ul>
+            <li><a class="inLinks" href="clengtstring.html">C Program to Find the Length of a String</a></li>
+            <li><a class="inLinks" href="cnoofspacesstring.html">C Program to Find no. of Spaces in a String</a>
+            </li>
+            <li><a class="inLinks" href="cnoofwords.html">C Program to Calculate Number of Words in a String </a>
+            </li>
+            <li><a class="inLinks" href="cfilefunctions.html">C Program to understand File functions
+                    (fwrite,fread,fputs,fgets)</a></li>
+            <li><a class="inLinks" href="cstructuresunions.html">C Program to understand Structures and Unions</a>
+            </li>
+            <li><a class="inLinks" href="ctowerofhanoi.html">C Program to explain Tower of Hanoi.</a></li>
+            <li><a class="inLinks" href="cstack.html">C Program for stack.</a></li>
+            <li><a class="inLinks" href="cqueue.html">C Program for Queue.</a></li>
+            <li><a class="inLinks" href="clinkedlist.html">C Program for Linked List.</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!--  -->
+
+<div id="gap">
+    <h5 id="allGap">All</h5>
+</div>
+
+
+<!-- Summary Links -->
+
+<div id="sContainer">
+
+    <div class="summary">
+        <ul>
+            <li class="summaryLinks"><a class="summaryLink">C</a> </li>
+            <li class="summaryLinks"><a class="summaryLink" href="/cplus">C++</a></li>
+            <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+
+        </ul>
+    </div>
+
+
+
+
+
+    <div class="summary">
+        <ul>
+            <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a>
+            </li>
+            <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using
+                    database</a></li>
+            
+
+        </ul>
+    </div>
+
+</div>
+    
+    
+      <!--  -->
+    
+    
+      <!-- Summary Links -->
+    
+    
+
+
+
+        <div id="animate">
+            <h6 style="text-align: center;">Designed by Program helper</h6>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script>
+            function jumppointers() {
+                let e = document.getElementById('pointerprograms');
+                e.scrollIntoView({
+                    block: 'start',
+                    behavior: 'smooth',
+                    inline: 'start'
+                });
+            }
+           
+        </script>
+</body>
+
+</html>

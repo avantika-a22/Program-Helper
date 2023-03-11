@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="In C programs, statements are executed sequentially in the order in which they appear in the program....">
+        <meta name="title" content="Control Statements in C">
+        <meta name="keywords" content="if, if else, switch, if condition in c,if else condition positive, programhelper">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Control Statements in C</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="font-size:x-large;font-family: cursive;">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askedQ.html">Asked Questions</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Div  -->
+    <div id="basicsDiv">
+        <div class="basic123">
+            <h4 id="plusaboutHead">Control Statements in C</h4>
+            <p class="basicAnswer">In C programs, statements are executed sequentially in the order in which they appear in the program.</p>
+            <p class="basicAnswer">But sometimes we may want to use a condition for executing only a part of program. Also many situations
+                arise where we may want to execute some statements several times.</p>
+                <p class="basicAnswer">Control statements enable us to
+                    specify the order in which the various instructions in the program are to be executed.</p>
+                    <p class="basicAnswer"><p class="basicAnswer"></p>Control statements define how the control is transferred to other parts ofthe program.
+                        C language supports different types of control-statements, which are as:-</p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollifelse()">1. if..else</a></p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollgoto()">2. goto</a></p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollswitch()">3. switch</a></p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollcontinue()">4. continue</a></p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollbreak()">5. break</a></p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollloop()">6. loop</a></p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollwhile()">-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwhile</a></p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollidowhile()">-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspdo...while</a></p>
+                        <p class="basicAnswer"><a class="scrollLinks" onclick="scrollfor()">-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor</a></p>
+        </div>
+        <div class="basic123">
+            <h4 id="aboutifelse">if...else</h4>
+            <p class="basicAnswer">This statement is used to test a condition and take
+                one of the two possible actions. If the condition is true then a single statement or a block of statements
+                is executed (one part of the program), otherwise another single statement or a block of statements is
+                executed (other part of the program).</p>
+                <img class="outputImage" src="/images/if else ladder.jpg" alt="if else loop in c">
+        </div>
+        <div class="basic123">
+            <h4 id="aboutgoto">goto</h4>
+            <p class="basicAnswer">This is an unconditional control statement that transfers the flow of control to another part of the
+                program.</p>
+                <p class="basicAnswer">It can be used as:-</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspgoto label;</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...........</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...........</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsplabel:</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...........</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...........</p>
+                <p class="betDec">label can be an identifier</p>
+                <p class="noteLine">Whenever the statement goto label; is encountered, the control is transferred to the statement that is just after the label.</p>
+                <h5>Program to print greater of two numbers-</h5>
+                <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+                <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+                <p class="mainCode">{</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> a = 2, b = 5;</p>
+                <p class="mainCode"><span style="font-weight: 500;">if</span>(a&lt;b)</p>
+                <p class="mainCode"><span style="font-weight: 500;">goto</span> aprint;</p>
+                    <p class="mainCode" style="font-weight: 500;">else</p>
+                    <p class="mainCode"><span style="font-weight: 500;">goto</span> bprint;</p>
+                    <p class="mainCode" style="font-weight: 500;color:green;">aprint:</p>
+                    <p class="mainCode"><span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">b is greater than a</span>");</p>
+                    <p class="mainCode"><span style="font-weight: 500;">goto</span> end;</p>
+                    <p class="mainCode" style="font-weight: 500;color: green;">bprint:</p>
+                        <p class="mainCode"><span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">a is greater than b</span>");</p>
+                        <p class="mainCode"><span style="font-weight: 500;">goto</span> end;</p>
+                        <p class="mainCode" style="font-weight: 500;color: green;">end:</p>
+                        <p class="mainCode" style="font-weight: 500;">getch();</p>
+                        <p class="mainCode">}</p>
+                    <p class="basicAnswer">The output of above program is b is greater than a.</p>
+        </div>
+        <div class="basic123">
+            <h4 id="aboutswitch">switch</h4>
+                <p class="basicAnswer">This is a multi-directional conditional control statement. Sometimes there is a need in program to make
+                    choice among number of alternatives. For making this choice, we use the switch statement</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspswitch(expression)</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcase constant1:</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...............</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcase conatant 2:</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp................</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcase constant 3:</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp................</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspdefault:</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp................</p>
+                    <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                    <p class="basicAnswer">The "expression" following the switch keyword can be
+                        any C expression that yields an integer value. It can be value of any integer or character variable, or
+                        a function call returning an integer, or an arithmetic, logical, relational, bitwise expression yielding an
+                        integer. It can be any integer or character constant also.</p>
+                <h5>Program to understand switch control statement</h5>
+                <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+                <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+                <p class="mainCode">{</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">int</span> num = 1;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspswitch(num)</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp case 1:</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<scanf style="font-weight: 500;">printf</scanf>("<span style="font-weight: 500;color: mediumblue;">The number is 1</span>");</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp case 2:</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">The number is 2</span>");</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp case 3:</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">The number is 3</span>");</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp default:</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Wrong number</span>");</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+
+                <p class="mainCode">}</p>
+                <p class="basicAnswer">The output of above program is - The number is 1.</p>
+        </div>
+
+
+        <div class="basic123">
+            <h4 id="aboutcontinue">continue</h4>
+                <p class="basicAnswer">It is used when we want to go the next iteration of the loop after skipping some statements of the loop.</p>
+                <p class="basicAnswer">It is generally used with a condition.</p>
+                <img src="/images/continue in c.jpg" alt="continue control statement in c" class="outputImage">
+                <p class="noteLine">When continue statement is encountered all the remaining statements
+                    (statements after continue) in the current iteration are not executed and the loop continues with the
+                    next iteration.</p>
+                <h5>Q. Program to understand the use of continue statement</h5>
+                <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+                <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+                <p class="mainCode">{</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> n;</p>
+                <p class="mainCode"><span style="font-weight: 500;">for</span>(n = 1;n < = 5;n + +)</p>
+                <p class="mainCode">{</p>
+                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">if</span>(n == 3)</p>
+                <p class="mainCode">&nbsp&nbsp{</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">continue statement example</span>");</p>
+
+                <p class="mainCode" style="color: blue;font-weight: 500;">&nbsp&nbsp&nbsp&nbspcontinue;</p>
+                <p class="mainCode">&nbsp&nbsp}</p>
+                <p class="mainCode"><span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">\nNo = %d</span>",n);</p>
+                <p class="mainCode">}</p>
+                <p class="mainCode"><span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">I am out of for loop</span>");</p>
+                <p class="mainCode">}</p>
+                <p class="mainCode" style="font-weight: 500;">getch();</p>
+                <p class="mainCode">}</p>
+                <h5>Output</h5>
+                <p class="betDec">No = 1</p>
+                <p class="betDec">No = 2</p>
+                <p class="betDec">continue example statement</p>
+                <p class="betDec">No = 4</p>
+                <p class="betDec">No = 5</p>
+                <p class="betDec">I am out of for loop</p>
+                <p class="basicAnswer">As the continue statement is encountered, loop continues with the next iteration.</p>
+        </div>
+
+
+
+        <div class="basic123">
+            <h4 id="aboutbreak">break</h4>
+                <p class="basicAnswer">It is used inside loops and switch statements.Sometimes it becomes necessary to come out of loop even after the loop before the loop becomes false.</p>
+                <p class="basicAnswer">In such situations, break statement is used to terminate the loop.</p>
+                <h5>Q. Program to understand the use break statement</h5>
+                <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+                <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+                <p class="mainCode">{</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> n;</p>
+                <p class="mainCode"><span style="font-weight: 500;">for</span>(n = 1;n < = 5;n + +)</p>
+                <p class="mainCode">{</p>
+                <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">if</span>(n == 3)</p>
+                <p class="mainCode">&nbsp&nbsp{</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">break statement example</span>");</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                <p class="mainCode">&nbsp&nbsp}</p>
+                <p class="mainCode"><span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">\nNo = %d</span>",n);</p>
+                <p class="mainCode">}</p>
+                <p class="mainCode"><span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Out of for loop</span>");</p>
+                <p class="mainCode">}</p>
+                <p class="mainCode" style="font-weight: 500;">getch();</p>
+                <p class="mainCode">}</p>
+                <h5>Output</h5>
+                <p class="betDec">No = 1</p>
+                <p class="betDec">No = 2</p>
+                <p class="betDec">No = break statement example</p>
+                <p class="betDec">No = Out of for loop</p>
+                <p class="betDec">As the break statement is encountered, it jumps out of the loop.</p>
+        </div>
+
+
+        <!-- Loops -->
+        <div class="basic123">
+            <h4>Loops</h4>
+            <p class="basicAnswer">Loops mean when we want to execute a set of statements , or a part of program several times.</p>
+            <p class="basicAnswer">Let's understand this with an example:-</p>
+            <p class="basicAnswer">&nbspIf we have to print numbers from 1 to 10.</p>
+            <p class="basicAnswer">One way of doing such is to write the print statement 10 times from 1 to 10.</p>
+            <p class="betDec">Other way of doing such efficiently,easily is to use loop.Let's see how same output is achieved using loops</p>
+            <p class="basicAnswer">There are three main loop statements in C:-</p>
+            <p class="basicAnswer">a. while</p>
+            <p class="basicAnswer">b. do while</p>
+            <p class="basicAnswer">c. for</p>
+            <p class="betDec">Let's understand each one of them:-</p>
+            <h3 id="aboutwhile">while loop</h3> 
+            <p class="betDec">It is used with a condition.For e.g. Print numbers from 1 to upto the number is 10.</p>
+            <img src="/images/while loop in c.jpg" alt="while loop in c flowchart" class="outputImage">
+            <h5>Program to understand use of while loop</h5>
+
+            <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+            <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">int</span> n = 1;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">while</span>(n &lt; = 10)</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("/n%d",n);</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspn = n + 1;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp}</p>
+            <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbspgetch();</p>
+            <p class="mainCode">}</p>
+            <h5 is="outputTag">Output</h5>
+            <p class="betDec">1</p>
+            <p class="betDec">2</p>
+            <p class="betDec">3</p>
+            <p class="betDec">4</p>
+            <p class="betDec">5</p>
+            <p class="betDec">6</p>
+            <p class="betDec">7</p>
+            <p class="betDec">8</p>
+            <p class="betDec">9</p>
+            <p class="betDec">10</p>
+            <p></p>
+     <!-- Do while loop -->
+            <h3 id="aboutdowhile">do..while loop</h3> 
+            <p class="betDec">It is used with a condition.</p>
+            <h5>Program to understand use of do...while loop</h5>
+            <img src="/images/do while loop in c.jpg" alt="dowhile loop in c flowchart" class="outputImage">
+            <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+            <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">int</span> n,count = 0;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<Span style="font-weight: 500;">printf</Span>("<span style="font-weight: 500;color: mediumblue;">Enter the number:- </span>");</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&n);</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;color: indigo;">do</span></p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspn = n / 10;;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcount + +;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp}<span style="font-weight: 500;">while</span>(n > 0);</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">No of digits = %d\n</span>",count);</p>
+            <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbspgetch();</p>
+            <p class="mainCode">}</p>
+            <p class="noteLine">If we would have written same program using a while loop, the output won't be correct when input number is 0;
+                For e.g. The count of digits in number 0 is 1, but using while loop the answer will come out to be 0;
+            </p>
+
+            <!-- For loop -->
+
+            <h3 id="aboutfor">for loop</h3> 
+            <p class="betDec">It is used frequently and has three expressions separated using semicolons.</p>
+            <h6>for(expression 1 ; expression 2 ; expression 3)</h6>
+            <h6>&nbspstatement;</h6>
+            <h6>&nbsp.......... ;</h6>
+            <h6>}</h6>
+            <h5>Program to understand use of for loop</h5>
+            <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+            <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">int</span> n = 10;</p>
+
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">for</span>(i = 1 ; i < n ; i + +)</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("\n %d", i);</p>
+
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp}</p>
+
+            <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbspgetch();</p>
+            <p class="mainCode">}</p>
+            <h5>Output</h5>
+            <p class="betDec">&nbsp&nbsp1</p>
+            <p class="betDec">&nbsp&nbsp2</p>
+            <p class="betDec">&nbsp&nbsp3</p>
+            <p class="betDec">&nbsp&nbsp4</p>
+            <p class="betDec">&nbsp&nbsp5</p>
+            <p class="betDec">&nbsp&nbsp6</p>
+            <p class="betDec">&nbsp&nbsp7</p>
+            <p class="betDec">&nbsp&nbsp8</p>
+            <p class="betDec">&nbsp&nbsp9</p>
+            <p></p>
+              
+
+
+
+        </div>
+
+
+    </div>
+
+       <!-- Button links basics -->
+
+       <div id="basicsBtnLink">
+        <button class="basicBtn"><a class="basicBtnLinks" href="csorting.html">Sorting</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="coperators.html">Operators</a></button>
+        <button class="basicBtn" style="background-color: chartreuse;"><a class="basicBtnLinks" href="ccontrolstatements.html">Loops</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="carrays.html">Arrays</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cfunctions.html">Functions</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cpointers.html">Pointers</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cstrings.html">Strings</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="basicsofC.html">Basics of C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cvariables.html">Variables in C</a></button>       
+ 
+
+    </div>
+
+
+ <!-- Footer -->
+ <div id="contain">
+
+    <div class="footer">
+        <ul>
+          <li><a class="inLinks" href="chelloWorld.html">C Program to print 'Hello World'</a> </li>
+          <li><a class="inLinks" href="caddition.html">C program to add two numbers</a></li>
+          <li><a class="inLinks" href="cdivision.html"> C Program to find quotient,remainder</a></li>
+          <li><a class="inLinks" href="csizeof.html">C Program to find Size of Datatypes</a></li>
+          <li><a class="inLinks" href="clargestamongthreeno.html"> C Program to Check the Largest among Three Numbers</a></li>
+          <li><a class="inLinks" href="cswapping.html">C Program to Swap Two Numbers</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer">
+        <ul>
+          <li><a class="inLinks" href="cevenodd.html">C Program to Check whether a Number is Even or Odd</a></li>
+          <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using Iteration</a></li>
+          <li><a class="inLinks" href="cfactorialrecursion.html">C Program to Find Factorial of a Number using Recursion</a></li>
+          <li><a class="inLinks" href="cmultiplytable.html">C Program to Print Multiplication Table</a></li>
+          <li><a class="inLinks" href="creverse.html">C Program to Reverse a Number</a></li>
+          <li><a class="inLinks" href="cpalindrome.html">C Program to Check whether a Number is Palindrome or not</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer">
+        <ul>
+          <li><a class="inLinks" href="cchecknopositivenegative.html">C Program to Check whether a Number is Positive , Negative or Zero</a></li>
+          <li><a class="inLinks" href="carmstrong.html">C program to Check Armstrong Number</a></li>
+          
+          <li><a class="inLinks" href="csumofarrayele.html">C Program to Find Sum of All the Elements in an array</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer">
+        <ul>
+          <li><a class="inLinks" href="creversestring.html">C Program to Reverse a String</a></li>
+          <li><a class="inLinks" href="clargestinarray.html">C Program to Find Largest Element in an Array</a></li>
+          <li><a class="inLinks" href="ctranspose.html">C Program to Find Transpose of a Matrix</a></li>
+          <li><a class="inLinks" href="cpatterns.html">C Program to Print Star Pattern and other patterns</a></li>
+          <li><a class="inLinks" href="ccallbyvaluereference.html">C Program of Call by Value and Call by Reference</a></li>
+          <li><a class="inLinks" href="cpointers.html">C Program to understand Pointers</a></li>
+  
+        </ul>
+      </div>
+  
+  
+      <div class="footer">
+        <ul>
+          <li><a class="inLinks" href="clengtstring.html">C Program to Find the Length of a String</a></li>
+          <li><a class="inLinks" href="cnoofspacesstring.html">C Program to Find no. of Spaces in a String</a></li>
+          <li><a class="inLinks" href="cnoofwords.html">C Program to Calculate Number of Words in a String </a></li>
+          <li><a class="inLinks" href="cfilefunctions.html">C Program to understand File functions (fwrite,fread,fputs,fgets)</a></li>
+          <li><a class="inLinks" style="color: teal;">C Program to understand Structures and Unions</a></li>
+          <li><a class="inLinks" href="ctowerofhanoi.html">C Program to explain Tower of Hanoi.</a></li>
+          <li><a class="inLinks" href="cstack.html">C Program for stack.</a></li>
+          <li><a class="inLinks" href="cqueue.html">C Program for Queue.</a></li>
+          <li><a class="inLinks" href="clinkedlist.html">C Program for Linked List.</a></li>
+        </ul>
+      </div>
+  </div>
+
+
+  <!--  -->
+
+  <div id="gap">
+    <h5 id="allGap">All</h5>
+  </div>
+
+
+  <!-- Summary Links -->
+
+  <div id="sContainer">
+
+    <div class="summary">
+      <ul>
+        <li class="summaryLinks"><a class="summaryLink">C</a> </li>
+        <li class="summaryLinks"><a class="summaryLink" href="/cplus">C++</a></li>
+        <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+        <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+        <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+
+      </ul>
+    </div>
+
+  
+
+  
+
+    <div class="summary">
+      <ul>
+        <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a></li>
+        <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using database</a></li>
+        
+
+      </ul>
+    </div>
+
+  </div>
+
+
+
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        function scrollifelse() {
+            let e = document.getElementById('aboutifelse');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollgoto() {
+            let e = document.getElementById('aboutgoto');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollswitch() {
+            let e = document.getElementById('aboutswitch');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollcontinue() {
+            let e = document.getElementById('aboutcontinue');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollbreak() {
+            let e = document.getElementById('aboutbreak');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollwhile() {
+            let e = document.getElementById('aboutwhile');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollidowhile() {
+            let e = document.getElementById('aboutdowhile');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollfor() {
+            let e = document.getElementById('aboutfor');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        
+    </script>
+</body>
+
+</html>

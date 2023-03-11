@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="C++ Program for Banking System">
+    <meta name="description" content="To code a banking or ATM system which includes functions like - Deposit Money() Withdraw Money() Check balance() Change pin()...">
+    <meta name="keywords" content="Banking system in C++,Projects in C++,ATM system in C++,programhelper,C++, Programminglanguages">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>ProgramHelper - C++ Program for Banking system</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="font-size:x-large;font-family: cursive;">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/homefromcplus">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/askQfromcplus">Asked Questions</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactfromcplus" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    <!-- Buttons -->
+
+<div class="pluscontainBtn">
+<div class="plusContainCard"><a class="pluscardLinks" href="/plusTemplates"><img class="plusCardimg" src="/images/plustemplatecard.jpg"></a></div>
+<div class="plusContainCard"><a class="pluscardLinks" href="/plusOperatorOverloading"><img class="plusCardimg" src="/images/plusoperatoroverloading.jpg"></a></div>
+<div class="plusContainCard"><a class="pluscardLinks" href="/plusFunctionOverloading"><img class="plusCardimg" src="/images/plusfunctionoverloadingcard.jpg"></a></div>
+<div class="plusContainCard"><a class="pluscardLinks" href="/plusFriendFunction"><img class="plusCardimg" src="/images/plusfriendfunctioncard.jpg"></a></div>
+</div>
+
+    <!-- Div  -->
+    
+
+    
+    <div class="pluscontainer">
+        <div class="plusbasic">
+            <h4 id="plusaboutHead"> C++ Program for Banking(ATM) System.</h4>
+            <p class="basicAnswer">To code a banking or ATM system which includes functions like -</p>
+            <p class="betDec">1. Deposit money</p>
+            <p class="betDec">2. Withdraw money</p>
+            <p class="betDec">3. View balance</p>
+            <p class="betDec">4. Change pin</p>
+            <p class="noteLine">1. First part is to add a deposit money function - </p>
+            <p class="basicAnswer">Let's have a look at how to create this function - </p>
+            <p class="basicAnswer">First we need to declare global variables for pin, balance and amount.Also we will use our file functions so that we can store our data(balance , pin) in files.</p>
+            <p class="basicAnswer">int balance;</p>
+            <p class="basicAnswer">int amount;</p>
+            <p class="basicAnswer">int pin;</p>
+            <p class="noteLine">These above three variables are global variables.</p>
+            <p class="betDec">Now, let us see the main function and then deposit money function -</p>
+            <img class="outputImage" src="/images/plus1partbankingsystem.jpg">
+            <p class="basicAnswer">In the above code, we have created(if not it automatically gets) a file named data.dat which stores net amount and other file pin.dat which stores pin of the user.</p>
+            <p class="basicAnswer">As the code runs, it first asks for pin ,if pin entered matches with the pin in file(pin.dat) it gives you access to other functions.</p>
+            <p class="noteLine">Now let's see deposit money function -</p>
+            <img src="/images/plus2partbankingsysteem.jpg" class="outputImage">
+            <p class="basicAnswer">In the above code, we can clearly see that if we want to add money it automatically adds it to the balance variable(balance variable's value is stored in file data.dat).</p>
+            <p class="noteLine">2. Second function is withdraw function</p>
+            <p class="basicAnswer">The function is similar to deposit except amount is deducted from balance here.</p>
+            <img src="/images/plus3partbankingsystem.jpg" class="outputImage">
+            <p class="noteLine">3. Third is view balance function - </p>
+            <img src="/images/plus4partbanlingsystem.jpg" class="outputImage">
+            <p class="basicAnswer">View balance is a simple ones just to print value of balance variable.</p>
+            <p class="noteLine">4. Fourth is change pin function - </p>
+            <p class="basicAnswer">It includes reading data from file pin.dat saved in the same folder and writing new pin to it.</p>
+            <img src="/images/plus5partbankingsystem.jpg" class="outputImage">
+            <p class="noteLine">K in the above code is also a globally declared variable.</p>
+            <h4 style="text-align: center;">Now let's see the entire code - </h4>
+            <p></p>
+           <p class="mainCode" style="color:green"> #include&lt;iostream></p>
+                <p class="mainCode" style="color:green">#include&lt;fstream></p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> balance = 0;</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> amount ;</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> pin;</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> k;</p>
+                <p class="mainCode" style="font-weight: 500;font-style: italic;">using namespace std;</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> withdraw()</p>
+                <p class="mainCode">&nbsp&nbsp{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">if</span>(balance<100)</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"insufficient balance"</span>;</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbalance = balance;</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                    
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbspelse</p> 
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"enter the amount to withdraw: "</span>&lt;&lt;endl;</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcin>>amount;</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif(amount%100!=0)</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+                           <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;"\n"&lt;&lt;<span style="color: mediumblue;">"please enter in multiple of 100"</span>;</p>
+                           <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbalance = balance;</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse if(balance&lt;amount)</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"Insufficient balance"</span>&lt;&lt;endl;</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbalance = balance;</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspelse</p>
+                        <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbalance <span style="font-weight: 800;">-</span>=amount;</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">return</span>(balance);</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                <p class="mainCode">&nbsp&nbsp}</p>
+                <p class="mainCode">void view()</p>
+                <p class="mainCode">&nbsp&nbsp{</p>
+                
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbspcout&lt;&lt;balance&lt;&lt;endl;</p>
+                    <p class="mainCode">&nbsp&nbsp}</p>
+                <p class="mainCode"><span style="font-weight: 500;">int</span> deposit()</p>
+                <p class="mainCode">&nbsp&nbsp{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"Enter the amount you want to deposit: "</span>;</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbspcin>>amount;</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbspbalance +=amount;</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">return</span>(balance);</p>
+                    
+                <p class="mainCode">&nbsp&nbsp}</p>
+                <p class="mainCode">void change()</p>
+                <p class="mainCode">&nbsp&nbsp{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbspint p;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"Please enter your old password: "</span>;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbspcin>>p;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">if</span> (p==pin)</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"Enter new password: "</span>&lt;&lt;endl;</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcin>>k;</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppin=k;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp}</p>	
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">else</span>{</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"wrong password"</span>;</p>
+                <p class="mainCode">&nbsp&nbsp&nbsp&nbsp}</p>
+                <p class="mainCode">&nbsp&nbspofstream fout;</p>
+                <p class="mainCode">&nbsp&nbspfout.open("<span style="color: blue;font-weight: 500;">pin.dat</span>");</p>
+                <p class="mainCode">&nbsp&nbspfout&lt;&lt;pin;</p>
+                <p class="mainCode">&nbsp&nbsp}</p>
+                
+                <p class="mainCode"><span style="font-weight: 500;">int</span> main()</p>
+                <p class="mainCode">{</p>
+                    <p class="mainCode"><span style="font-weight: 500;">int</span> choice,password;</p>
+                    <p class="mainCode">cout&lt;&lt;<span style="color: blue;font-weight: 500;">"*************WELCOME*************"</span>;</p>
+                    <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"Enter your password: "</span>&lt;&lt;endl;</p>
+                     <p class="mainCode">cin>>password;</p>
+                         <p class="mainCode">ifstream fin;</p>
+                                <p class="mainCode">fin.open("<span style="color: blue;font-weight: 500;">data.dat</span>");</p>
+                                 <p class="mainCode">fin>>balance;</p>
+                     <p class="mainCode">ifstream f;</p>
+                     <p class="mainCode">f.open("<span style="color: blue;font-weight: 500;">pin.dat</span>");</p>
+                     <p class="mainCode">f>>pin;</p>
+                     <p class="mainCode">cout&lt;&lt;pin;</p> 
+                    <p class="mainCode">if(password!=pin)</p>
+                    <p class="mainCode">{</p>
+                        <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"wrong password!"</span>&lt;&lt;endl;</p>
+                    <p class="mainCode">}</p>
+                    <p class="mainCode">else{</p>
+                    
+                    <p class="mainCode">cout&lt;&lt;"<span style="font-weight: 500;color: blue;">1-withdraw money,2-view balance,3-change password,4-deposit,5-exit</span>"&lt;&lt;endl;</p>
+                    <p class="mainCode"><span style="font-weight: 500;">while</span>(choice!=5)</p>
+                    <p class="mainCode">{</p>
+                    <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"enter your choice: "</span>&lt;&lt;endl;</p>
+                    <p class="mainCode">cin>>choice;</p>
+                    <p class="mainCode"><span style="font-weight: 500;">switch</span>(choice)</p>
+                    <p class="mainCode">{</p>
+                        <p class="mainCode">&nbsp&nbsp<span style="color: navy;font-weight: 500;">case</span> 1:</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbspbalance=withdraw();</p>
+                            <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                        <p class="mainCode">&nbsp&nbsp<span style="color: navy;font-weight: 500;">case</span> 2:</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbspview();</p>
+                            <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                        <p class="mainCode">&nbsp&nbsp<span style="color: navy;font-weight: 500;">case</span> 3:</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbspchange();</p>
+                            <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                       <p class="mainCode">&nbsp&nbsp<span style="color: navy;font-weight: 500;">case</span> 4:</p>
+                            <p class="mainCode">&nbsp&nbsp&nbsp&nbspbalance=deposit();</p>
+                            <p class="mainCode" style="font-weight: 500;">&nbsp&nbsp&nbsp&nbspbreak;</p>
+                        <p class="mainCode">&nbsp&nbspdefault:</p>
+                        <p class="mainCode">&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"invalid option"</span>;</p>
+                        <p class="mainCode">&nbsp&nbspofstream fout;</p>
+                <p class="mainCode">&nbsp&nbspfout.open("<span></span>");</p>
+                <p class="mainCode">&nbsp&nbspfout&lt;&lt;balance;</p>
+                    <p class="mainCode">}</p>
+                    <p class="mainCode">}</p>
+                <p class="mainCode">}</p>
+                
+                    <p class="mainCode">return 0;</p>
+                <p class="mainCode">}</p>
+                
+    </div>
+
+
+
+    <div id="plusqualities">
+        <div class="plusProgramLinks">
+            <h4 id="aboutCHead">Other Programs</h4> 
+            <a  class="plusprogramaLinks" href="/plusaddition">1. C++ Program to add two numbers.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a  class="plusprogramaLinks" href="/plusvolumeofcube">2. C++ Program to calculate the volume of a cube.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a  class="plusprogramaLinks" href="/pluscircle">3. C++ Program which accepts the radius of a circle from the user and compute the area and circumference</a>
+        </div>
+
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusfindangle">4. C++ Program to find the missing third angle of a triangle.</a>
+         </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plussortingnames">5. C++ Program to Sort Names in an Alphabetical Order</a>
+        </div>
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/pluscontructordestructor">6. C++ Program for Constructor and Destructor.</a>
+         </div>
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusreversearray">7. C++ Program to Reverse an Array.</a>
+         </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" style="color: black;">8. c++ Program for Banking(ATM) System.</a>
+        </div>
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusthisPointer">9. Concept of This Pointer.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/pluspolymorphism">10. Polymorphism in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusinheritance">11. Ineritance in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusencapsulation">12.  Encapsulation in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusLoops">13. Loops in C++(for loop, while loop, do while loop).</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="plusManipulatestring">14. Sorting.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusstatements">15. Continue, break, goto statements in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plussearchelearray">16. C++ Program to search an element and its Position in a given array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="plusmergetwoarraysort">17. C++ program to merge two arrays and then sort the resulted array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusswapwithoutvariable">18. C++ Program for How to swap two numbers without using a temporary variable?</a>
+        </div>  
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusseriessum">19. C++ Program to find sum of series 1 + 1/2 + 1/3 + 1/4 + .. + 1/n.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusleapyear">20. C++ Program to check if a given year is leap year.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusprintwithoutloop">21. C++ program to print numbers from 1 to 100 without using loop?</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusFiles">22. Files in C++.</a>
+        </div>
+       
+
+    </div>
+
+    
+      <!-- Summary Links -->
+    
+      <div id="plusLastContain">
+    
+        <div class="summary">
+          <ul>
+            <li class="summaryLinks"><a class="summaryLink" href="/cfromcplus">C</a> </li>
+            <li class="summaryLinks"><a class="summaryLink">C++</a></li>
+            <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+    
+            <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a></li>
+            <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using database</a></li>
+            
+    
+          </ul>
+        </div>
+    
+      </div>
+    
+
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

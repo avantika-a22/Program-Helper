@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Control statements in C++ -Continue,goto,switch,break">
+    <meta name="description" content="Continue - It is used when we want to go the next iteration of the loop after skipping some statements of the loop. Switch - This is a multi-directional conditional control statement. Sometimes there is a need in program to make
+    choice among number of alternatives. For making this choice, we use the switch statement">
+    <meta name="keywords" content="Control statement,C++,continue,goto statement,switch statement,break,loops,C++ Program to use ifelse statement,C++ Program to use continue statement,C++ Program to use switch statement,C++ Program to understand goto statement">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>ProgramHelper - Control statements in C++ -Continue,goto,switch,break</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="font-size:x-large;font-family: cursive;">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/homefromcplus">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/askQfromcplus">Asked Questions</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactfromcplus" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    <!-- Buttons -->
+
+<div class="pluscontainBtn">
+<div class="plusContainCard"><a class="pluscardLinks" href="/plusTemplates"><img class="plusCardimg" src="/images/plustemplatecard.jpg"></a></div>
+<div class="plusContainCard"><a class="pluscardLinks" href="/plusOperatorOverloading"><img class="plusCardimg" src="/images/plusoperatoroverloading.jpg"></a></div>
+<div class="plusContainCard"><a class="pluscardLinks" href="/plusFunctionOverloading"><img class="plusCardimg" src="/images/plusfunctionoverloadingcard.jpg"></a></div>
+<div class="plusContainCard"><a class="pluscardLinks" href="/plusFriendFunction"><img class="plusCardimg" src="/images/plusfriendfunctioncard.jpg"></a></div>
+
+
+</div>
+
+    <!-- Div  -->
+    
+
+    
+    <div class="pluscontainer">
+        <div class="plusbasic">
+
+
+            <h4 id="plusaboutHead">Control Statements in C++</h4>
+
+            <p class="basicAnswer">Control statements enable us to
+                specify the order in which the various instructions in the program are to be executed.</p>
+                
+                    <p class="basicAnswer"><a class="scrollLinks" onclick="scrollifelse()">1. if..else</a></p>
+                    <p class="basicAnswer"><a class="scrollLinks" onclick="scrollgoto()">2. goto</a></p>
+                    <p class="basicAnswer"><a class="scrollLinks" onclick="scrollswitch()">3. switch</a></p>
+                    <p class="basicAnswer"><a class="scrollLinks" onclick="scrollcontinue()">4. continue</a></p>
+                    <p class="basicAnswer"><a class="scrollLinks" onclick="scrollbreak()">5. break</a></p>
+                    <p class="basicAnswer"><a class="scrollLinks" onclick="scrollloop()">6. loop</a></p>
+
+    </div>
+    <div class="basic123">
+        <h4 id="aboutifelse">if...else</h4>
+        <p class="basicAnswer">This statement is used to test a condition and take
+            one of the two possible actions. If the condition is true then a single statement or a block of statements
+            is executed (one part of the program), otherwise another single statement or a block of statements is
+            executed (other part of the program).</p>
+            <img class="outputImage" src="/images/if else ladder.jpg" alt="if else loop in c">
+    </div>
+    <div class="basic123">
+        <h4 id="aboutgoto">goto</h4>
+        <p class="basicAnswer">This is an unconditional control statement that transfers the flow of control to another part of the
+            program.</p>
+            <p class="basicAnswer">It can be used as:-</p>
+            <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspgoto label;</p>
+            <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...........</p>
+            <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...........</p>
+            <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsplabel:</p>
+            <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...........</p>
+            <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...........</p>
+            <p class="betDec">label can be an identifier</p>
+            <p class="noteLine">Whenever the statement goto label; is encountered, the control is transferred to the statement that is just after the label.</p>
+            <h5>Program to print greater of two numbers-</h5>
+            <p class="mainCode" style="color: green;">#include&lt;iostream.h></p>
+            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+            <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode"><span style="font-weight: 500;">int</span> a = 2, b = 5;</p>
+            <p class="mainCode"><sapn>if</sapn>(a&lt;b)</p>
+            <p class="mainCode"><span style="font-weight: 500;">goto</span><span style="font-weight: 400;color: darkorange;"> aprint</span>;</p>
+                <p class="mainCode" style="font-weight: 500;">else</p>
+                <p class="mainCode"><span style="font-weight: 500;">goto</span> <span style="font-weight: 400;color:darkorange;">bprint</span>;</p>
+                <p class="mainCode" style="font-weight: 400;color: darkorange;">aprint:</p>
+                <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"b is greater than a"</span>;</p>
+                <p class="mainCode"><span style="font-weight: 500;">goto</span> end;</p>
+                <p class="mainCode" style="font-weight: 400;color: darkorange;">bprint:</p>
+                    <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"a is greater than b"</span>;</p>
+                    <p class="mainCode"><span style="font-weight: 500;">goto</span> end;</p>
+                    <p class="mainCode">end:</p>
+                    <p class="mainCode">getch();</p>
+                    <p class="mainCode">}</p>
+                <p class="basicAnswer">The output of above program is b is greater than a.</p>
+    </div>
+    <div class="basic123">
+        <h4 id="aboutswitch">switch</h4>
+            <p class="basicAnswer">This is a multi-directional conditional control statement. Sometimes there is a need in program to make
+                choice among number of alternatives. For making this choice, we use the switch statement</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspswitch(expression)</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcase constant1:</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp...............</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcase conatant 2:</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp................</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcase constant 3:</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp................</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspdefault:</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp................</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                <p class="basicAnswer"> It can be value of any integer or character variable, or
+                    a function call returning an integer, or an arithmetic, logical, relational, bitwise expression yielding an
+                    integer. It can be any integer or character constant also.</p>
+            <h5>Program to understand switch control statement</h5>
+            <p class="mainCode" style="color: green;">#include&lt;iostream.h></p>
+            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+            <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">int</span> num = 1;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">switch</span>(num)</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp case 1:</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"The number is 1"</span>;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp case 2:</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"The number is 2"</span>;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp case 3:</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"The number is 3"</span>;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp default:</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"Wrong number"</span>;</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</p>
+                <p class="mainCode">getch();</p>
+            <p class="mainCode">}</p>
+            <p class="basicAnswer">The output of above program is - The number is 1.</p>
+    </div>
+
+
+    <div class="basic123">
+        <h4 id="aboutcontinue">continue</h4>
+            <p class="basicAnswer">It is used when we want to go the next iteration of the loop after skipping some statements of the loop.</p>
+            <p class="basicAnswer">It is generally used with a condition.</p>
+            <img src="/images/continue in c.jpg" alt="continue control statement in c" class="outputImage">
+            <p class="noteLine">When continue statement is encountered all the remaining statements
+                (statements after continue) in the current iteration are not executed and the loop continues with the
+                next iteration.</p>
+            <h5>Q. Program to understand the use of continue statement</h5>
+            <p class="mainCode" style="color: green;">#include&lt;iostream.h></p>
+            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+            <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode"><span style="font-weight: 500;">int</span> n;</p>
+            <p class="mainCode"><span style="font-weight: 500;">for</span>(n = 1;n < = 5;n + +)</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbsp<span style="font-weight: 500;">if</span>(n = = 3)</p>
+            <p class="mainCode">&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"continue statement example"</span>;</p>
+            <p class="mainCode" style="font-weight: 500;color: midnightblue;">&nbsp&nbsp&nbsp&nbspcontinue;</p>
+            <p class="mainCode">&nbsp&nbsp}</p>
+            <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"No = "</span>&lt;&lt;n;</p>
+            <p class="mainCode">}</p>
+            <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"I am out of for loop"</span>;</p>
+            <p class="mainCode">}</p>
+            <p class="mainCode" style="font-weight: 500;">getch();</p>
+            <p class="mainCode">}</p>
+            <h5>Output</h5>
+            <p class="betDec">No = 1</p>
+            <p class="betDec">No = 2</p>
+            <p class="betDec">continue example statement</p>
+            <p class="betDec">No = 4</p>
+            <p class="betDec">No = 5</p>
+            <p class="betDec">I am out of for loop</p>
+            <p class="basicAnswer">As the continue statement is encountered, loop continues with the next iteration.</p>
+    </div>
+
+
+
+    <div class="basic123">
+        <h4 id="aboutbreak">break</h4>
+            <p class="basicAnswer">It is used inside loops and switch statements.Sometimes it becomes necessary to come out of loop even after the loop before the loop becomes false.</p>
+            <p class="basicAnswer">In such situations, break statement is used to terminate the loop.</p>
+            <h5>Q. Program to understand the use break statement</h5>
+            <p></p>
+            <p class="mainCode" style="color: green;">#include&lt;iostream.h></p>
+            <p class="mainCode" style="color: green;">#include&lt;conio.h></p>
+            <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode"><span style="font-weight: 500;">int</span> n;</p>
+            <p class="mainCode"><span style="font-weight: 500;">for</span>(n = 1;n < = 5;n + +)</p>
+            <p class="mainCode">{</p>
+            <p class="mainCode">&nbsp&nbspif(n = = 3)</p>
+            <p class="mainCode">&nbsp&nbsp{</p>
+            <p class="mainCode">&nbsp&nbsp&nbsp&nbspcout&lt;&lt;<span style="color: mediumblue;">"break statement example"</span>;</p>
+            <p class="mainCode" style="color: mediumvioletred;">&nbsp&nbsp&nbsp&nbspbreak;</p>
+            <p class="mainCode">&nbsp&nbsp}</p>
+            <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"No = "</span>&lt;&lt;n;</p>
+            <p class="mainCode">}</p>
+            <p class="mainCode">cout&lt;&lt;<span style="color: mediumblue;">"Out of for loop"</span>;</p>
+            <p class="mainCode">}</p>
+            <p class="mainCode" style="font-weight: 500;">getch();</p>
+            <p class="mainCode">}</p>
+            <h5>Output</h5>
+            <p class="betDec">No = 1</p>
+            <p class="betDec">No = 2</p>
+            <p class="betDec">No = break statement example</p>
+            <p class="betDec">No = Out of for loop</p>
+            <p class="betDec">As the break statement is encountered, it jumps out of the loop.</p>
+      </div>
+        </div>
+
+
+
+    <div id="plusqualities">
+        <div class="plusProgramLinks">
+            <h4 id="aboutCHead">Other Programs</h4>
+            <a  class="plusprogramaLinks" href="/plusaddition">1. C++ Program to add two numbers.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a  class="plusprogramaLinks" href="/plusvolumeofcube">2. C++ Program to calculate the volume of a cube.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a  class="plusprogramaLinks" href="/pluscircle">3. C++ Program which accepts the radius of a circle from the user and compute the area and circumference</a>
+        </div>
+
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusfindangle">4. C++ Program to find the missing third angle of a triangle.</a>
+         </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plussortingnames">5. C++ Program to Sort Names in an Alphabetical Order</a>
+        </div>
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/pluscontructordestructor">6. C++ Program for Constructor and Destructor.</a>
+         </div>
+         <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusreversearray">7. C++ Program to Reverse an Array.</a>
+         </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusbankingsystem">8. c++ Program for Banking(ATM) System.</a>
+        </div>
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusthisPointer">9. Concept of This Pointer.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/pluspolymorphism">10. Polymorphism in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusinheritance">11. Ineritance in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusencapsulation">12.  Encapsulation in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusLoops">13. Loops in C++(for loop, while loop, do while loop).</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="plusManipulatestring">14. Sorting.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" style="color: black;">15. Continue, break, goto statements in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plussearchelearray">16. C++ Program to search an element and its Position in a given array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="plusmergetwoarraysort">17. C++ program to merge two arrays and then sort the resulted array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusswapwithoutvariable">18. C++ Program for How to swap two numbers without using a temporary variable?</a>
+        </div>  
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusseriessum">19. C++ Program to find sum of series 1 + 1/2 + 1/3 + 1/4 + .. + 1/n.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusleapyear">20. C++ Program to check if a given year is leap year.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusprintwithoutloop">21. C++ program to print numbers from 1 to 100 without using loop?</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusFiles">22. Files in C++.</a>
+        </div>
+       
+
+    </div>
+
+    
+      <!-- Summary Links -->
+    
+      <div id="plusLastContain">
+    
+        <div class="summary">
+          <ul>
+            <li class="summaryLinks"><a class="summaryLink" href="/cfromcplus">C</a> </li>
+            <li class="summaryLinks"><a class="summaryLink">C++</a></li>
+            <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+            <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+    
+            <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a></li>
+            <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using database</a></li>
+            
+    
+          </ul>
+        </div>
+    
+      </div>
+    
+
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script>
+                  function scrollgoto() {
+            let e = document.getElementById('aboutgoto');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollswitch() {
+            let e = document.getElementById('aboutswitch');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollcontinue() {
+            let e = document.getElementById('aboutcontinue');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollbreak() {
+            let e = document.getElementById('aboutbreak');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollwhile() {
+            let e = document.getElementById('aboutwhile');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollidowhile() {
+            let e = document.getElementById('aboutdowhile');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        function scrollifelse() {
+            let e = document.getElementById('aboutifelse');
+            e.scrollIntoView({
+                block: 'start',
+                behavior: 'smooth',
+                inline: 'start'
+            });
+        }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="An array is a collection of similar type of data items and each data item is
+    called an element of the
+    array">
+    <meta name="title" content="Arrays in C">
+    <meta name="keywords" content="arrays in c,array,programhelper, c programs, programming, programming languages">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>C arrays</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="askedQ.html">Asked Questions</a>
+                </li>
+              
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Div  -->
+    <div id="basicsDiv">
+        <div class="basic123">
+            <h4 id="aboutCHead"> Arrays</h4>
+            <p class="basicAnswer">- Variables we use can store only one variable at a time,but there are situations
+                when we want to store more than one value.</p>
+            <p class="basicAnswer">For example, we want to store roll no. of 50 students in a class.Normally to perform
+                this task we would :-</p>
+            <p class="basicAnswer">1. Declare 50 variables to store roll no. </p>
+            <p class="basicAnswer">2. Assigning value to each variable.</p>
+            <p class="basicAnswer">3. Display the value of each variable.</p>
+            <p class="basicAnswer">&nbsp&nbsp&nbspWe can carry out our task with these 3 steps but this is not efficient
+                way of doing it and it would be difficult to assign value one by one in cases where we have to work with
+                large data.</p
+            <p class="basicAnswer">Consider a situation where information of 1000 employees is to be recorded.Here 1000
+                variables would be used in case of not using array, but array makes it simple.</p>
+            <p class="basicAnswer">How? Let's see!</p>
+            <p class="noteLine">Basically, an array is a collection of similar type of data items and each data item is
+                called an element of the
+                array. </p>
+            <p class="betDec">The element of array share the same variable name but each element has a different index
+                number known as subscript.</p>
+                <p class="betDec">Like we discussed about storing roll no of 50 students, we can take an array variable rollNo[50] of type int.The size of this array variable is 50, so it can store upto 50 integer values.</p>
+                <p class="basicAnswer">The individual elements of this array are: -</p>
+                <p class="basicAnswer">&nbsp&nbsp&nbsp&nbsprollNo[0], rollNo[1], rollNo[2], rollNo[3]................rollNo[50]</p>
+                <p class="noteLine">In C,the subscripts start from zero, so rollNo[O] is the first element, rollNo[ 1] is the second element of array
+                    and so on.</p>
+                    <h4>C Program to add elements of an array.</h4>
+                    <p class="mainCode" style="color: green;">#include&lt;stdio.h></p>
+                    <p class="mainCode" style="color: green;">#include&lt;conio.></p>
+                    <p class="mainCode"><span style="font-weight: 500;">void</span> main()</p>
+                    <p class="mainCode">{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight:500">int</span> i,sum = 0,arr[10]; &nbsp&nbsp&nbsp&nbsp<span style="font-style: italic;color: blue;">// it can store 10 int values</span></p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">for</span>(i = 0; i &lt; 10; i + +)</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">printf</span>("<span style="font-weight: 500;color: mediumblue;">Enter %d element</span>",i+1);</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">scanf</span>("%d",&arr[i]);</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp}</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp<span style="font-weight: 500;">for</span>(i = 0; i &lt; 10; i + +)</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp{</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbspsum = sum + arr[i];</p>
+                    <p class="mainCode">&nbsp&nbsp&nbsp&nbsp}</p>
+                    <p class="mainCode"><span style="font-weight:500">printf</span>("<span style="font-weight:500;color: mediumblue;">The sum of elements of array is %d</span>", sum);</p>
+                    <p class="mainCode" style="font-weight: 500;">getch();</p>
+                    <p class="mainCode">}</p>
+                    <p class="mainCode"></p>
+                    <p class="mainCode"></p>
+                    <p class="mainCode"></p>
+
+        </div>
+
+    </div>
+
+    <!-- Button links basics -->
+
+    <div id="basicsBtnLink">
+        <button class="basicBtn"><a class="basicBtnLinks" href="coperators.html">Operators</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="ccontrolstatements.html">Loops</a></button>
+        <button class="basicBtn" style="background-color: chartreuse;"><a class="basicBtnLinks">Arrays</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cfunctions.html">Functions</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cpointers.html">Pointers</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cstrings.html">Strings</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="basicsofC.html">Basics of C</a></button>
+        <button class="basicBtn"><a class="basicBtnLinks" href="cvariables.html">Variables in C</a></button>
+
+
+     
+
+
+
+     <!-- Footer -->
+    <div id="contain">
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="chelloWorld.html">C Program to print 'Hello World'</a> </li>
+                <li><a class="inLinks" href="caddition.html">C program to add two numbers</a></li>
+                <li><a class="inLinks" href="cdivision.html"> C Program to find quotient,remainder</a></li>
+                <li><a class="inLinks" href="csizeof.html">C Program to find Size of Datatypes</a></li>
+                <li><a class="inLinks" href="clargestamongthreeno.html"> C Program to Check the Largest among Three
+                        Numbers</a></li>
+                <li><a class="inLinks" href="cswapping.html">C Program to Swap Two Numbers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="cevenodd.html"> C Program to Check whether a Number is Even or Odd</a></li>
+                <li><a class="inLinks" href="cfactorial.html">C Program to Find Factorial of a Number using
+                        Iteration</a></li>
+                <li><a class="inLinks" href="cfactorialrecursion.html">C Program to Find Factorial of a Number using
+                        Recursion</a></li>
+                <li><a class="inLinks" href="cmultiplytable.html">C Program to Print Multiplication Table</a></li>
+                <li><a class="inLinks" href="creverse.html">C Program to Reverse a Number</a></li>
+                <li><a class="inLinks" href="cpalindrome.html">C Program to Check whether a Number is Palindrome or
+                        not</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="cchecknopositivenegative.html">C Program to Check whether a Number is
+                        Positive , Negative or Zero</a></li>
+                <li><a class="inLinks" href="carmstrong.html">C program to Check Armstrong Number</a></li>
+
+                <li><a class="inLinks" href="csumofarrayele.html">C Program to Find Sum of All the Elements in an
+                        array</a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="creversestring.html">C Program to Reverse a String</a></li>
+                <li><a class="inLinks" href="clargestinarray.html">C Program to Find Largest Element in an Array</a>
+                </li>
+                <li><a class="inLinks" href="ctranspose.html">C Program to Find Transpose of a Matrix</a></li>
+                <li><a class="inLinks" href="cpatterns.html">C Program to Print Star Pattern and other patterns</a></li>
+                <li><a class="inLinks" href="ccallbyvaluereference.html">C Program of Call by Value and Call by
+                        Reference</a></li>
+                <li><a class="inLinks" href="cpointers.html">C Program to understand Pointers</a></li>
+
+            </ul>
+        </div>
+
+
+        <div class="footer">
+            <ul>
+                <li><a class="inLinks" href="clengtstring.html">C Program to Find the Length of a String</a></li>
+                <li><a class="inLinks" href="cnoofspacesstring.html">C Program to Find no. of Spaces in a String</a>
+                </li>
+                <li><a class="inLinks" href="cnoofwords.html">C Program to Calculate Number of Words in a String </a>
+                </li>
+                <li><a class="inLinks" href="cfilefunctions.html">C Program to understand File functions
+                        (fwrite,fread,fputs,fgets)</a></li>
+                <li><a class="inLinks" href="cstructuresunions.html">C Program to understand Structures and Unions</a>
+                </li>
+                <li><a class="inLinks" href="ctowerofhanoi.html">C Program to explain Tower of Hanoi.</a></li>
+                <li><a class="inLinks" href="cstack.html">C Program for stack.</a></li>
+                <li><a class="inLinks" href="cqueue.html">C Program for Queue.</a></li>
+                <li><a class="inLinks" href="clinkedlist.html">C Program for Linked List.</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!--  -->
+
+    <div id="gap">
+        <h5 id="allGap">All</h5>
+    </div>
+
+
+    <!-- Summary Links -->
+
+    <div id="sContainer">
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink">C</a> </li>
+                <li class="summaryLinks"><a class="summaryLink" href="/cplus">C++</a></li>
+                <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a>
+                </li>
+                <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using
+                        database</a></li>
+                
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

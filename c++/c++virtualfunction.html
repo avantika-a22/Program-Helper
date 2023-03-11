@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="Virtual Function in C++">
+    <meta name="description"
+        content="A virtual function is a member function that you expect to be redefined in derived classes. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class's version of the function...">
+    <meta name="keywords" content="virtual function in c++, what is virtual function, virtual function,C++">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>ProgramHelper - Virtual Function in C++.</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" style="font-size:x-large;font-family: cursive;">ProgramHelper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/homefromcplus">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/askQfromcplus">Asked Questions</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactfromcplus" tabindex="-1">Contact us</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- Div  -->
+
+
+
+    <div class="pluscontainer">
+        <div class="plusbasic">
+            <h4 id="plusaboutHead">Virtual Function</h4>
+            <p class="basicAnswer">A virtual function is a member function that you expect to be redefined in derived
+                classes. When you refer to a derived class object using a pointer or a reference to the base class, you
+                can call a virtual function for that object and execute the derived class's version of the function.</p>
+            <p class="basicAnswer">Virtual functions ensure that the correct function is called for an object,
+                regardless of the expression used to make the function call..</p>
+
+
+            <p class="basicAnswer">For example:-</p>
+
+            <p class="basicAnswer" style="color: blue;font-weight: 800;">class Employee {</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> public:</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> Employee(const string& name, int dept);</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> virtual void print() const;</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> // ...</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> private:</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> string first_name , family_name;</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> short depar tment;</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> // ...</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> };</p>
+            <p class="betDec">The keyword virtual indicates that print() can act as an interface to the print() function
+                defined in this
+                class and print() functions defined in classes derived from it.</p>
+            <p class="betDec"> Where such print() functions are
+                defined in derived classes, the compiler ensures that the right print() for the given Employee object is
+                invoked in each case.</p>
+            <p></p>
+            <p class="betDec" style="color: black;font-weight: 600;">To allow a virtual function declaration to act as
+                an interface to functions defined in derived
+                classes, the argument types specified for a function in a derived class cannot differ from the argument
+                types declared in the base, and only very slight changes are allowed for the return type
+                . A virtual member function is sometimes called a method.</p>
+            <p class="basicAnswer">A virtual function must be defined for the class in which it is first declared
+                (unless it is declared
+                to be a pure virtual function)</p>
+
+            <p class="basicAnswer" style="color: blue;font-weight: 800;"> void Employee::print() const</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;">{</p>
+            <p class="basicAnswer" style="color: blue;font-weight: 800;">cout << family_name << '\t' << department
+                    << '\n' ;</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">// ...</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">}</p>
+                    <p class="betDec" style="font-family: cursive;text-decoration: underline;">A virtual function can be
+                        used even if no class is derived from its class, and a derived class that
+                        does not need its own version of a virtual function need not provide one. When deriving a class,
+                        simply provide an appropriate function if it is needed. For example:</p>
+
+
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">class Manager : public Employee {</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">public:</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">Manager(const string& name, int dept,
+                        int lvl);</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">void print() const;</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">// ...</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">private:</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">list<Employee∗> group;</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">short level;</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">// ...</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">};</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">void Manager::print() const</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">{</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">Employee::print();</p>
+                    <p class="basicAnswer" style="color: blue;font-weight: 800;">cout << "\tlevel " << level << '\n'
+                            ;</p>
+                            <p class="basicAnswer" style="color: blue;font-weight: 800;">// ...</p>
+                            <p class="basicAnswer" style="color: blue;font-weight: 800;">}</p>
+
+                            <p class="basicAnswer">A function from a derived class with the same name and the same set of argument types as a virtual
+                            function in a base is said to override the base class version of the virtual function. Furthermore, it
+                            is possible to override a virtual function from a base with a more derived return type</p>
+                            <p class="basicAnswer">
+                                <span style="margin-left: 20px;">Except</span> where we explicitly say which version of a virtual function is called (as in the call
+                                Employee::print()), the overriding function is chosen as the most appropriate for the object for which
+                                it is called.</p>
+                                <p class="basicAnswer"> Independently of which base class (interface) is used to access an object, we always get
+                                the same function when we use the virtual function call mechanism.</p>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div id="plusqualities">
+        <div class="plusProgramLinks">
+            <h4 id="aboutCHead">Other Programs</h4>
+            <a class="plusprogramaLinks" href="/plusaddition">1. C++ Program to add two numbers.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusvolumeofcube">2. C++ Program to calculate the volume of a
+                cube.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/pluscircle">3. C++ Program which accepts the radius of a circle from
+                the user and compute the area and circumference</a>
+        </div>
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusfindangle">4. C++ Program to find the missing third angle of a
+                triangle.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plussortingnames">5. C++ Program to Sort Names in an Alphabetical
+                Order</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/pluscontructordestructor">6. C++ Program for Constructor and
+                Destructor.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusreversearray">7. C++ Program to Reverse an Array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusbankingsystem">8. c++ Program for Banking(ATM) System.</a>
+        </div>
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/thispointer" style="color: black;">9. Concept of This Pointer.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/pluspolymorphism">10. Polymorphism in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusInheritance">11. Ineritance in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusEncapsulation">12. Encapsulation in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusLoops">13. Loops in C++(for loop, while loop, do while
+                loop).</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="plusManipulatestring">14. Sorting.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusstatements">15. Continue, break, goto statements in C++.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plussearchelearray">16. C++ Program to search an element and its
+                Position in a given array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="plusmergetwoarraysort">17. C++ program to merge two arrays and then
+                sort the resulted array.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusswapwithoutvariable">18. C++ Program for How to swap two numbers
+                without using a temporary variable?</a>
+        </div>
+
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusseriessum">19. C++ Program to find sum of series 1 + 1/2 + 1/3 +
+                1/4 + .. + 1/n.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusleapyear">20. C++ Program to check if a given year is leap
+                year.</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusprintwithoutloop">21. C++ program to print numbers from 1 to 100
+                without using loop?</a>
+        </div>
+        <div class="plusProgramLinks">
+            <a class="plusprogramaLinks" href="/plusFiles">22. Files in C++.</a>
+        </div>
+
+
+    </div>
+
+
+    <!-- Summary Links -->
+
+    <div id="plusLastContain">
+
+        <div class="summary">
+            <ul>
+                <li class="summaryLinks"><a class="summaryLink" href="/cfromcplus">C</a> </li>
+                <li class="summaryLinks"><a class="summaryLink">C++</a></li>
+                <li class="summaryLinks"><a class="summaryLink">HTML (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">Nodejs (Soon)</a></li>
+                <li class="summaryLinks"><a class="summaryLink">php (Soon)</a></li>
+
+                <li class="summaryLinks"><a class="summaryLink">Html form using html,css and javascript</a></li>
+                <li class="summaryLinks"><a class="summaryLink">Html form with fetching data and using database</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <div id="animate">
+        <h6 style="text-align: center;">Designed by Program helper</h6>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
